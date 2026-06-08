@@ -1,1 +1,2892 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Destination C1 & C2 — Grammar and Vocabulary</title>
 
+<style>
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  font-family:Arial,sans-serif;
+  background:#f0fdf4;
+  color:#172033;
+  line-height:1.65;
+  user-select:none;
+  overflow-x:hidden;
+}
+
+.bg{
+  position:fixed;
+  inset:0;
+  z-index:0;
+  pointer-events:none;
+  overflow:hidden;
+}
+.bg span{
+  position:absolute;
+  font-size:36px;
+  opacity:.08;
+  animation:float 13s infinite ease-in-out;
+}
+.bg span:nth-child(1){left:7%;top:18%;animation-delay:0s}
+.bg span:nth-child(2){left:80%;top:18%;animation-delay:2s}
+.bg span:nth-child(3){left:15%;top:70%;animation-delay:4s}
+.bg span:nth-child(4){left:85%;top:74%;animation-delay:1s}
+.bg span:nth-child(5){left:48%;top:45%;animation-delay:3s}
+.bg span:nth-child(6){left:62%;top:82%;animation-delay:5s}
+
+@keyframes float{
+  0%,100%{transform:translateY(0) rotate(0deg)}
+  50%{transform:translateY(-24px) rotate(8deg)}
+}
+
+.hero{
+  position:relative;
+  z-index:1;
+  background:linear-gradient(135deg,#064e3b,#15803d,#65a30d);
+  color:white;
+  text-align:center;
+  padding:54px 18px 42px;
+}
+.book{
+  display:inline-block;
+  background:rgba(255,255,255,.16);
+  border:1px solid rgba(255,255,255,.3);
+  padding:8px 14px;
+  border-radius:999px;
+  font-weight:800;
+  margin-bottom:14px;
+}
+h1{
+  margin:0;
+  font-size:42px;
+  line-height:1.15;
+}
+.subtitle{
+  max-width:900px;
+  margin:14px auto 0;
+  font-size:18px;
+  opacity:.96;
+}
+.notice{
+  max-width:850px;
+  margin:22px auto 0;
+  background:#fef3c7;
+  color:#78350f;
+  border:2px solid #facc15;
+  border-radius:20px;
+  padding:16px 18px;
+  font-weight:700;
+}
+.notice small{
+  display:block;
+  font-weight:500;
+  margin-top:5px;
+}
+.source{
+  max-width:850px;
+  margin:12px auto 0;
+  background:rgba(255,255,255,.14);
+  border:1px solid rgba(255,255,255,.28);
+  color:#ecfdf5;
+  border-radius:18px;
+  padding:13px 16px;
+  font-size:14px;
+}
+.source b{color:#dcfce7}
+
+.nav{
+  position:sticky;
+  top:0;
+  z-index:20;
+  background:rgba(255,255,255,.95);
+  backdrop-filter:blur(10px);
+  display:flex;
+  justify-content:center;
+  gap:10px;
+  flex-wrap:wrap;
+  padding:13px;
+  border-bottom:1px solid #bbf7d0;
+  box-shadow:0 8px 20px rgba(15,23,42,.08);
+}
+.nav a{
+  text-decoration:none;
+  background:#ecfdf5;
+  color:#166534;
+  border:1px solid #86efac;
+  border-radius:999px;
+  padding:9px 15px;
+  font-weight:800;
+}
+.nav a:hover{
+  background:#15803d;
+  color:white;
+}
+
+.wrap{
+  position:relative;
+  z-index:1;
+  max-width:1150px;
+  margin:32px auto 70px;
+  padding:0 16px;
+}
+.card{
+  background:white;
+  border:1px solid #bbf7d0;
+  border-radius:28px;
+  padding:26px;
+  margin-bottom:32px;
+  box-shadow:0 18px 44px rgba(15,23,42,.11);
+  scroll-margin-top:95px;
+}
+.head{
+  border-bottom:1px solid #dcfce7;
+  padding-bottom:16px;
+  margin-bottom:20px;
+}
+h2{
+  margin:0;
+  color:#166534;
+  font-size:28px;
+}
+.desc{
+  margin-top:10px;
+  background:#f0fdf4;
+  border-left:6px solid #22c55e;
+  border-radius:14px;
+  padding:12px 14px;
+  color:#374151;
+}
+
+.langbox{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:18px;
+  margin:20px 0;
+}
+.lang{
+  background:#f8fafc;
+  border:1px solid #e5e7eb;
+  border-radius:20px;
+  padding:18px;
+}
+.lang h3{
+  margin:0 0 10px;
+  color:#166534;
+}
+.lang ul{
+  margin:10px 0 0;
+  padding-left:20px;
+}
+.keybox{
+  background:#ecfdf5;
+  border:1px solid #86efac;
+  border-left:6px solid #16a34a;
+  border-radius:20px;
+  padding:18px;
+  margin:18px 0;
+}
+.keybox h3{
+  margin:0 0 10px;
+  color:#15803d;
+}
+.grid{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:10px;
+}
+.pill{
+  background:white;
+  border:1px solid #bbf7d0;
+  border-radius:14px;
+  padding:10px 12px;
+  font-size:14px;
+}
+
+.q{
+  border:1px solid #e5e7eb;
+  border-radius:20px;
+  padding:18px;
+  margin:16px 0;
+  background:#fff;
+}
+.q:hover{
+  border-color:#86efac;
+  box-shadow:0 10px 24px rgba(34,197,94,.12);
+}
+.qtag{
+  display:inline-block;
+  font-size:12px;
+  font-weight:800;
+  color:#166534;
+  background:#dcfce7;
+  border-radius:999px;
+  padding:4px 10px;
+  margin-bottom:8px;
+}
+.qtitle{
+  font-weight:800;
+  margin-bottom:11px;
+  color:#111827;
+}
+.opt{
+  display:block;
+  margin:8px 0;
+  padding:11px 13px;
+  border-radius:13px;
+  background:#fafafa;
+  border:1px solid #f1f5f9;
+  cursor:pointer;
+}
+.opt:hover{
+  background:#f0fdf4;
+  border-color:#86efac;
+}
+.opt input{margin-right:8px}
+
+.btn{
+  border:0;
+  border-radius:17px;
+  background:linear-gradient(135deg,#15803d,#65a30d);
+  color:white;
+  font-size:16px;
+  font-weight:800;
+  padding:14px 24px;
+  cursor:pointer;
+  box-shadow:0 10px 24px rgba(21,128,61,.25);
+}
+.btn:hover{transform:translateY(-1px)}
+
+.result{margin-top:22px}
+.summary{
+  background:#ecfdf5;
+  border:1px solid #86efac;
+  border-left:6px solid #22c55e;
+  border-radius:18px;
+  padding:18px;
+  margin-bottom:16px;
+}
+.summary h3{
+  margin:0;
+  color:#15803d;
+  font-size:24px;
+}
+.ans{
+  border-radius:16px;
+  padding:15px;
+  margin:12px 0;
+  border:1px solid #e5e7eb;
+}
+.ok{background:#ecfdf5;border-color:#86efac}
+.bad{background:#fff1f2;border-color:#fecdd3}
+.oktxt{color:#15803d;font-weight:800}
+.badtxt{color:#be123c;font-weight:800}
+.ex{margin-top:8px;font-size:15px}
+.footer{
+  text-align:center;
+  color:#64748b;
+  margin:34px 0 0;
+  font-size:14px;
+}
+
+@media(max-width:800px){
+  h1{font-size:31px}
+  .card{padding:19px;border-radius:22px}
+  h2{font-size:23px}
+  .subtitle{font-size:16px}
+  .langbox{grid-template-columns:1fr}
+  .grid{grid-template-columns:1fr}
+}
+</style>
+</head>
+
+<body>
+
+<div class="bg">
+  <span>📚</span>
+  <span>📝</span>
+  <span>🎓</span>
+  <span>✨</span>
+  <span>🧠</span>
+  <span>📖</span>
+</div>
+
+<section class="hero">
+  <div class="book">Professional English</div>
+
+  <h1>Destination C1 & C2<br>Grammar and Vocabulary</h1>
+
+  <div class="subtitle">
+    Қазақша және орысша түсіндіру + unit-based тесттер. Grammar және Vocabulary тақырыптары Professional English дайындығына бейімделген.
+  </div>
+
+  <div class="notice">
+    © @elnazm_ln<br>
+    Бұл авторлық жұмыс. Көшіруге, қайта сатуға және таратуға тыйым салынады.
+    <small>Это авторская работа. Копировать, перепродавать и распространять запрещено.</small>
+  </div>
+
+  <div class="source">
+    <b>Source:</b> Destination C1 & C2: Grammar and Vocabulary
+  </div>
+</section>
+
+<nav class="nav" id="nav"></nav>
+
+<main class="wrap" id="app"></main>
+
+<script>
+const DATA = [
+  {
+id:"unit1",
+title:"Unit 1 — Grammar: Present time",
+type:"Grammar",
+desc:"Present Simple, Emphatic Present Simple, Present Continuous, Present Perfect Simple, Present Perfect Continuous, stative and non-stative verbs.",
+kazakh:`
+<h3>Қазақша түсіндіру</h3>
+
+<p><b>Present time</b> — қазіргі уақытқа қатысты шақтар жүйесі. Бұл unit-та Present Simple, Present Continuous, Present Perfect Simple, Present Perfect Continuous және stative/non-stative verbs қарастырылады.</p>
+
+<ul>
+<li><b>Present Simple</b> — тұрақты әрекет, әдет, жалпы шындық, тұрақты жағдай, кесте, нұсқаулық, мақал-мәтел және қысқаша мазмұндау үшін қолданылады.</li>
+<li><b>Emphatic Present Simple</b> — do/does + verb арқылы ойды күшейтеді. Мысалы: <i>I do agree</i> — “Мен шынымен келісемін”.</li>
+<li><b>Present Continuous</b> — дәл қазір болып жатқан әрекет, уақытша жағдай, өзгеріп жатқан процесс немесе алдын ала жоспарланған іс үшін қолданылады.</li>
+<li><b>Present Perfect Simple</b> — өткен әрекеттің қазіргі нәтижесі маңызды болғанда, өмірлік тәжірибе айтылғанда, әрекет жақында аяқталғанда немесе “so far / already / yet / ever / just” сияқты сөздермен қолданылады.</li>
+<li><b>Present Perfect Continuous</b> — әрекет өткенде басталып, қазірге дейін жалғасып жатқанын және оның ұзақтығын көрсету үшін қолданылады.</li>
+<li><b>Stative verbs</b> — know, believe, understand, want, prefer, own сияқты күйді білдіретін етістіктер әдетте Continuous формасында қолданылмайды.</li>
+<li>Бірақ кейбір етістіктер мағынасына қарай Continuous-та келе алады: <i>I think</i> — “менің ойымша”, <i>I’m thinking</i> — “мен ойланып жүрмін”.</li>
+</ul>
+`,
+russian:`
+<h3>Русское объяснение</h3>
+
+<p><b>Present time</b> — это система времён, которые описывают настоящее, связь прошлого с настоящим и действия, происходящие сейчас или вокруг настоящего момента.</p>
+
+<ul>
+<li><b>Present Simple</b> используется для фактов, привычек, регулярных действий, постоянных состояний, расписаний, инструкций, пословиц, заголовков и кратких пересказов.</li>
+<li><b>Emphatic Present Simple</b> используется для усиления значения: do/does + основной глагол. Например: <i>I do understand</i> — “Я действительно понимаю”.</li>
+<li><b>Present Continuous</b> показывает действие сейчас, временную ситуацию, развивающийся процесс или запланированное действие.</li>
+<li><b>Present Perfect Simple</b> связывает прошлое с настоящим: важен результат, опыт, недавнее завершение или действие до настоящего момента.</li>
+<li><b>Present Perfect Continuous</b> подчёркивает длительность действия, которое началось в прошлом и продолжается до настоящего.</li>
+<li><b>Stative verbs</b> обычно не используются в Continuous, если описывают состояние: know, believe, understand, want, own.</li>
+<li>Некоторые глаголы могут менять значение: <i>I think</i> = мнение, <i>I’m thinking</i> = процесс размышления.</li>
+</ul>
+`,
+keys:[
+"Present Simple: facts, habits, permanent states, schedules",
+"Emphatic Present Simple: do/does + verb for emphasis",
+"Present Continuous: now, temporary situations, changing situations",
+"Present Perfect Simple: result, experience, recently completed action",
+"Present Perfect Continuous: duration from past to now",
+"Stative verbs: know, believe, understand, want, own",
+"Action meaning: I’m thinking = I’m considering"
+],
+questions:[
+{
+q:"Choose the correct option: The committee usually ______ new proposals every Monday.",
+a:"reviews",
+options:["reviews","is reviewing","has reviewed","has been reviewing"],
+e:"Қазақша: usually тұрақты әдетті көрсетеді, сондықтан Present Simple керек. Русский: usually показывает регулярное действие, поэтому нужен Present Simple."
+},
+{
+q:"Choose the correct option: The students ______ a presentation at the moment.",
+a:"are preparing",
+options:["prepare","are preparing","have prepared","have been prepared"],
+e:"Қазақша: at the moment дәл қазір болып жатқан әрекетті білдіреді. Русский: at the moment требует Present Continuous."
+},
+{
+q:"Choose the correct option: She ______ three academic articles so far this year.",
+a:"has written",
+options:["writes","is writing","has written","has been writing"],
+e:"Қазақша: so far осы уақытқа дейінгі нәтижені көрсетеді, сондықтан Present Perfect Simple. Русский: so far указывает на результат к настоящему моменту."
+},
+{
+q:"Choose the correct option: They ______ on the research project for two months.",
+a:"have been working",
+options:["work","are working","have worked","have been working"],
+e:"Қазақша: for two months әрекеттің ұзақтығын көрсетеді. Русский: длительность действия до настоящего момента выражается Present Perfect Continuous."
+},
+{
+q:"Choose the correct option: I ______ your point, but I need more evidence.",
+a:"understand",
+options:["am understanding","understand","have been understanding","understood"],
+e:"Қазақша: understand — stative verb, сондықтан Continuous қолданылмайды. Русский: understand обозначает состояние понимания, поэтому нужен Present Simple."
+},
+{
+q:"Choose the correct option: I ______ about applying for a scholarship.",
+a:"am thinking",
+options:["think","am thinking","have thought","have been thought"],
+e:"Қазақша: think бұл жерде “ойланып жүрмін” деген әрекет, сондықтан Continuous дұрыс. Русский: think в значении consider может использоваться в Continuous."
+},
+{
+q:"Choose the correct option: The lecture ______ at 9 a.m. tomorrow.",
+a:"starts",
+options:["starts","is starting","has started","has been starting"],
+e:"Қазақша: кесте/расписание үшін Present Simple қолданылады. Русский: для расписаний используется Present Simple."
+},
+{
+q:"Choose the correct option: I ______ agree with your conclusion; it is well supported.",
+a:"do",
+options:["am","do","have","does"],
+e:"Қазақша: do + verb ойды күшейту үшін қолданылады. Русский: do используется для эмфатического усиления в Present Simple."
+},
+{
+q:"Choose the correct option: More universities ______ online learning platforms these days.",
+a:"are using",
+options:["use","are using","have used","have been used"],
+e:"Қазақша: these days өзгеріп жатқан қазіргі тенденцияны білдіреді. Русский: these days часто показывает changing/temporary situation, поэтому Present Continuous."
+},
+{
+q:"Choose the correct option: We ______ the final report yet.",
+a:"haven’t submitted",
+options:["don’t submit","aren’t submitting","haven’t submitted","haven’t been submitting"],
+e:"Қазақша: yet көбіне Present Perfect Simple-пен қолданылады. Русский: yet в отрицательных предложениях обычно требует Present Perfect Simple."
+}
+]
+},
+{
+id:"unit2",
+title:"Unit 2 — Vocabulary: Thinking and learning",
+type:"Vocabulary",
+desc:"Topic vocabulary, phrasal verbs, collocations, idioms and word formation connected with thinking and learning.",
+kazakh:`
+<h3>Қазақша түсіндіру</h3>
+
+<p><b>Thinking and learning</b> unit-ы ойлау, пайымдау, оқу, білім алу және академиялық ортаға қатысты сөздерді қамтиды. Бұл бөлім Professional English үшін өте маңызды, себебі академиялық мәтіндерде дәл осы сөздер жиі кездеседі.</p>
+
+<ul>
+<li><b>Thinking vocabulary</b> — assume, assess, consider, contemplate, deduce, estimate, justify, presume, suppose сияқты сөздер ойлау, болжау, бағалау, дәлелдеу және қорытынды жасау мағыналарын береді.</li>
+<li><b>Learning vocabulary</b> — academic, curriculum, lecture, seminar, tutorial, tuition, self-study, distance learning сияқты сөздер оқу жүйесіне қатысты қолданылады.</li>
+<li><b>Phrasal verbs</b> — brush up on, come up with, figure out, mull over, puzzle out, read up on/about, think over, think through сияқты тіркестерді дайын күйінде жаттаған дұрыс.</li>
+<li><b>Collocations</b> — take into account, cast doubt on, come to a conclusion, from my point of view, make sense, in principle, under consideration сияқты тұрақты тіркестер академиялық сөйлеуде жиі қолданылады.</li>
+<li><b>Idioms</b> — have your wits about you, know what’s what, put two and two together, ring a bell, split hairs, take stock of сияқты idiom-дар ойлау, түсіну және шешім қабылдау мағынасын береді.</li>
+<li><b>Word formation</b> — assume → assumption, believe → belief/disbelief, confuse → confusion, decide → decision, explain → explanation, rational → irrational сияқты сөзжасам формаларына назар аудару керек.</li>
+</ul>
+`,
+russian:`
+<h3>Русское объяснение</h3>
+
+<p><b>Thinking and learning</b> — это vocabulary unit про мышление, обучение, академическую среду, выводы, сомнения, аргументацию и работу с информацией.</p>
+
+<ul>
+<li><b>Thinking vocabulary</b>: assume, assess, consider, contemplate, deduce, estimate, justify, presume, suppose — слова для предположения, оценки, анализа, доказательства и вывода.</li>
+<li><b>Learning vocabulary</b>: academic, curriculum, lecture, seminar, tutorial, tuition, self-study, distance learning — слова про образование, занятия и учебный процесс.</li>
+<li><b>Phrasal verbs</b>: brush up on, come up with, figure out, mull over, puzzle out, read up on/about, think over, think through — устойчивые глагольные сочетания C1–C2 уровня.</li>
+<li><b>Collocations</b>: take into account, cast doubt on, come to a conclusion, from my point of view, make sense, in principle, under consideration — их лучше учить как готовые блоки.</li>
+<li><b>Idioms</b>: have your wits about you, know what’s what, put two and two together, ring a bell, split hairs, take stock of — идиомы, связанные с пониманием, логикой и решением.</li>
+<li><b>Word formation</b>: assume → assumption, confuse → confusion, decide → decision, explain → explanation, rational → irrational — важно правильно выбирать часть речи.</li>
+</ul>
+`,
+keys:[
+"assume / presume / suppose: think something is true without full proof",
+"assess / estimate: judge or calculate value, level or amount",
+"deduce: reach a conclusion using logic",
+"justify: give reasons to show something is right",
+"figure out / puzzle out: understand after thinking",
+"brush up on: improve knowledge of something",
+"take into account: consider as a factor",
+"cast doubt on: make something seem uncertain",
+"come to a conclusion: decide after thinking",
+"word formation: assume → assumption, decide → decision"
+],
+vocab:[
+["assume","болжау, дәлелсіз рас деп қабылдау","предполагать, принимать за истину без полного доказательства"],
+["assess","бағалау, деңгейін анықтау","оценивать, определять уровень или качество"],
+["consider","қарастыру, ойлану","рассматривать, обдумывать"],
+["contemplate","терең ойлану, ой елегінен өткізу","созерцать, глубоко обдумывать"],
+["deduce","логикалық қорытынды шығару","делать логический вывод"],
+["estimate","шамамен бағалау, мөлшерін есептеу","оценивать приблизительно, подсчитывать"],
+["justify","дәлелдеу, негіздеу","обосновывать, оправдывать аргументами"],
+["presume","болжам жасау, солай деп санау","предполагать, считать вероятным"],
+["suppose","болжау, ойлау","предполагать, полагать"],
+["baffle","түсіндірмей қою, абдырату","сбивать с толку, озадачивать"],
+["academic","академиялық, оқу-білімге қатысты","академический, учебный"],
+["curriculum","оқу бағдарламасы","учебная программа"],
+["lecture","дәріс","лекция"],
+["seminar","семинар, талқылау сабағы","семинар"],
+["tutorial","шағын оқыту сабағы, жеке/топтық сабақ","практическое занятие, консультация"],
+["tuition","оқу ақысы; оқыту","плата за обучение; обучение"],
+["self-study","өздігінен оқу","самостоятельное обучение"],
+["distance learning","қашықтан оқу","дистанционное обучение"],
+["brush up on","білімді қайталау, жаңарту","освежить знания"],
+["come up with","ойлап табу, ұсыну","придумать, предложить"],
+["figure out","түсіну, шешу","понять, разобраться"],
+["mull over","ұзақ ойлану","обдумывать"],
+["puzzle out","ойланып шешу","разобраться, решить после размышления"],
+["read up on/about","бір тақырыпты оқып зерттеу","почитать/изучить тему"],
+["think over","ойланып көру","обдумать"],
+["think through","жан-жақты ойластыру","продумать до конца"],
+["take into account","ескеру","учитывать"],
+["cast doubt on","күмән келтіру","ставить под сомнение"],
+["come to a conclusion","қорытындыға келу","прийти к выводу"],
+["make sense","мағынасы болу, түсінікті болу","иметь смысл, быть понятным"],
+["under consideration","қарастырылып жатқан","на рассмотрении"],
+["ring a bell","таныс сияқты естілу","звучать знакомо"],
+["split hairs","ұсақ нәрсеге бола таласу","придираться к мелочам"],
+["take stock of","жағдайды бағалау","оценить ситуацию"]
+],
+questions:[
+{
+q:"Choose the correct option: It is dangerous to ______ that all students learn in the same way.",
+a:"assume",
+options:["assume","estimate","justify","baffle"],
+e:"Қазақша: assume — дәлел толық болмаса да, бір нәрсені рас деп қабылдау. Русский: assume значит предполагать без полного доказательства."
+},
+{
+q:"Choose the correct option: The committee will ______ the candidate’s academic potential before making a decision.",
+a:"assess",
+options:["assess","ponder","baffle","presume"],
+e:"Қазақша: assess — бағалау, деңгейін анықтау. Русский: assess означает оценивать уровень, качество или потенциал."
+},
+{
+q:"Choose the correct option: From the evidence, we can ______ that the experiment was unsuccessful.",
+a:"deduce",
+options:["deduce","suppose","concentrate","discriminate"],
+e:"Қазақша: deduce — дәлелдерге сүйеніп қорытынды жасау. Русский: deduce — логически вывести из доказательств."
+},
+{
+q:"Choose the correct option: The professor asked the student to ______ his answer with clear arguments.",
+a:"justify",
+options:["justify","reckon","contemplate","gather"],
+e:"Қазақша: justify — жауапты дәлелмен негіздеу. Русский: justify значит обосновать с помощью аргументов."
+},
+{
+q:"Choose the correct option: I need to ______ my academic writing before the exam.",
+a:"brush up on",
+options:["brush up on","come around to","take in","make out"],
+e:"Қазақша: brush up on — бұрынғы білімді қайталап, жақсарту. Русский: brush up on значит освежить и улучшить знания."
+},
+{
+q:"Choose the correct option: It took us hours to ______ the meaning of the article.",
+a:"figure out",
+options:["figure out","face up to","swot up on","hit upon"],
+e:"Қазақша: figure out — ойланып түсіну. Русский: figure out означает понять после размышления."
+},
+{
+q:"Choose the correct option: We must take cultural differences ______ when designing the curriculum.",
+a:"into account",
+options:["into account","in doubt","on balance","under impression"],
+e:"Қазақша: take into account — бір факторды ескеру. Русский: take into account значит учитывать."
+},
+{
+q:"Choose the correct option: The new data cast doubt ______ the previous conclusion.",
+a:"on",
+options:["on","in","for","with"],
+e:"Қазақша: cast doubt on — бір нәрсеге күмән келтіру. Русский: правильная collocation: cast doubt on something."
+},
+{
+q:"Choose the correct option: The name sounds familiar, but I can’t remember the details. It rings a ______.",
+a:"bell",
+options:["bell","head","stock","wood"],
+e:"Қазақша: ring a bell — таныс сияқты естілу. Русский: ring a bell значит звучать знакомо."
+},
+{
+q:"Choose the correct option: There was a lot of ______ after the examiner handed out the wrong papers.",
+a:"confusion",
+options:["confusion","confuse","confused","confusingly"],
+e:"Қазақша: a lot of кейін noun керек, сондықтан confusion дұрыс. Русский: после a lot of нужно существительное, поэтому confusion."
+}
+]
+},
+  {
+id:"unit3",
+title:"Unit 3 — Grammar: Past time",
+type:"Grammar",
+desc:"Past Simple, Emphatic Past Simple, Past Continuous, Past Perfect Simple, Past Perfect Continuous, would and used to.",
+kazakh:`
+<h3>Қазақша түсіндіру</h3>
+
+<p><b>Past time</b> — өткен уақыттағы әрекеттерді, жағдайларды және оқиғалардың ретін айту үшін қолданылады. Бұл unit-та Past Simple, Past Continuous, Past Perfect Simple, Past Perfect Continuous, would және used to қарастырылады.</p>
+
+<ul>
+<li><b>Past Simple</b> — өткен уақытта аяқталған әрекет, өткендегі әдет, өткендегі тұрақты жағдай немесе негізгі оқиғаларды айту үшін қолданылады.</li>
+<li><b>Emphatic Past Simple</b> — did + verb арқылы өткен шақтағы ойды күшейту үшін қолданылады. Мысалы: <i>I did enjoy the lecture</i> — “Маған дәріс шынымен ұнады”.</li>
+<li><b>Past Continuous</b> — өткен уақытта белгілі бір сәтте болып жатқан әрекет, фондық жағдай, уақытша жағдай немесе бір уақытта қатар жүріп жатқан әрекеттер үшін қолданылады.</li>
+<li><b>Past Simple vs Past Continuous</b>: Past Continuous фонды береді, Past Simple негізгі оқиғаны көрсетеді. Мысалы: <i>I was reading when he called</i>.</li>
+<li><b>Past Perfect Simple</b> — өткендегі бір сәттен бұрын болған әрекетті көрсету үшін қолданылады. Бір оқиға екіншісінен бұрын аяқталғанын білдіреді.</li>
+<li><b>Past Perfect Continuous</b> — өткендегі бір сәтке дейін жалғасып тұрған әрекеттің ұзақтығын көрсетеді.</li>
+<li><b>would</b> — өткендегі қайталанатын әдетті сипаттайды, бірақ әдетте өткендегі тұрақты күйге қолданылмайды.</li>
+<li><b>used to</b> — бұрын болған, бірақ қазір жоқ әдет немесе жағдай үшін қолданылады. <i>Be used to</i> және <i>get used to</i> басқа мағына береді: үйреніп кету.</li>
+</ul>
+`,
+russian:`
+<h3>Русское объяснение</h3>
+
+<p><b>Past time</b> используется для описания действий, состояний, привычек и последовательности событий в прошлом.</p>
+
+<ul>
+<li><b>Past Simple</b> используется для завершённых действий в прошлом, регулярных действий в прошлом, прошлых состояний и главных событий в рассказе.</li>
+<li><b>Emphatic Past Simple</b> строится через did + verb и усиливает значение: <i>I did enjoy it</i> — “Мне действительно понравилось”.</li>
+<li><b>Past Continuous</b> показывает действие в процессе в определённый момент прошлого, фоновую ситуацию, временное действие или параллельные действия.</li>
+<li><b>Past Simple vs Past Continuous</b>: Past Continuous даёт фон, Past Simple показывает главное событие.</li>
+<li><b>Past Perfect Simple</b> показывает действие, которое произошло раньше другого момента или действия в прошлом.</li>
+<li><b>Past Perfect Continuous</b> подчёркивает длительность действия до определённого момента в прошлом.</li>
+<li><b>would</b> используется для повторяющихся привычек в прошлом, особенно в рассказах о далёком прошлом.</li>
+<li><b>used to</b> используется для прошлых привычек и состояний, которые сейчас уже не актуальны. <i>Be used to</i> = быть привыкшим, <i>get used to</i> = привыкать.</li>
+</ul>
+`,
+keys:[
+"Past Simple: finished actions, past habits, main events",
+"Emphatic Past Simple: did + verb for emphasis",
+"Past Continuous: action in progress at a past moment",
+"Past Simple vs Past Continuous: main event vs background",
+"Past Perfect Simple: action before another past moment",
+"Past Perfect Continuous: duration before a past moment",
+"would: repeated past habits, not usually past states",
+"used to: past habits and past states no longer true",
+"be used to: be familiar with something",
+"get used to: become familiar with something"
+],
+questions:[
+{
+q:"Choose the correct option: Sony and Philips ______ the CD in the early 1980s.",
+a:"invented",
+options:["invented","have invented","were inventing","had invented"],
+e:"Қазақша: in the early 1980s — аяқталған өткен уақыт, сондықтан Past Simple. Русский: конкретное завершённое время в прошлом требует Past Simple."
+},
+{
+q:"Choose the correct option: I ______ him about the meeting yesterday.",
+a:"told",
+options:["told","have told","had told","was telling"],
+e:"Қазақша: yesterday өткен уақыттың нақты белгісі, Past Simple керек. Русский: yesterday указывает на завершённое прошлое время."
+},
+{
+q:"Choose the correct option: While I ______ my essay, the computer suddenly crashed.",
+a:"was writing",
+options:["wrote","was writing","had written","had been writing"],
+e:"Қазақша: while кезінде әрекет процессте болған, сондықтан Past Continuous. Русский: while часто вводит фоновое действие в Past Continuous."
+},
+{
+q:"Choose the correct option: When I arrived, the lecture ______ already ______.",
+a:"had started",
+options:["started","was starting","had started","has started"],
+e:"Қазақша: дәріс мен келгенге дейін басталып қойған, сондықтан Past Perfect Simple. Русский: действие произошло раньше другого прошлого действия."
+},
+{
+q:"Choose the correct option: She was tired because she ______ all night.",
+a:"had been studying",
+options:["studied","was studying","had studied","had been studying"],
+e:"Қазақша: өткендегі бір сәтке дейін жалғасқан ұзақ әрекет, Past Perfect Continuous. Русский: подчёркивается длительность действия до момента в прошлом."
+},
+{
+q:"Choose the correct option: When I was a child, I ______ my grandparents every summer.",
+a:"visited",
+options:["visited","was visiting","had visited","have visited"],
+e:"Қазақша: өткендегі қайталанатын әдет Past Simple арқылы беріледі. Русский: repeated past action can be expressed by Past Simple."
+},
+{
+q:"Choose the correct option: Before she became a professor, she ______ several research articles.",
+a:"had published",
+options:["published","was publishing","had published","has published"],
+e:"Қазақша: профессор болғанға дейін мақалалар жариялаған, яғни бір өткен әрекет екіншісінен бұрын. Русский: действие произошло раньше другого прошлого события."
+},
+{
+q:"Choose the correct option: People ______ send letters more often before email became common.",
+a:"used to",
+options:["used to","were used to","got used to","use to"],
+e:"Қазақша: бұрынғы әдет, қазір өзгерген, сондықтан used to. Русский: used to describes a past habit that is no longer true."
+},
+{
+q:"Choose the correct option: At first, online learning seemed strange, but now students are ______ it.",
+a:"used to",
+options:["used to","used","use to","would"],
+e:"Қазақша: be used to — үйренген болу. Русский: be used to means be familiar with something."
+},
+{
+q:"Choose the correct option: My grandfather ______ tell us stories about his school days.",
+a:"would",
+options:["would","had","has","was"],
+e:"Қазақша: would өткендегі қайталанатын әдетті, әсіресе естелік/әңгімеде көрсетеді. Русский: would can describe repeated past habits."
+}
+]
+},
+  {
+id:"unit4",
+title:"Unit 4 — Vocabulary: Change and technology",
+type:"Vocabulary",
+desc:"Topic vocabulary, phrasal verbs, collocations, idioms and word formation connected with change, progress, technology and innovation.",
+kazakh:`
+<h3>Қазақша түсіндіру</h3>
+
+<p><b>Change and technology</b> unit-ы өзгеріс, даму, технология, инновация, интернет және заманауи құрылғыларға қатысты vocabulary береді. Бұл сөздер Professional English, academic reading және эссе жазуда жиі қолданылады.</p>
+
+<ul>
+<li><b>Change vocabulary</b> — adapt, adjust, alter, amend, convert, evolve, modify, refine, reform, revise, transform сияқты сөздер өзгеріс түрлерін білдіреді.</li>
+<li><b>Technology vocabulary</b> — breakthrough, broadband, data, download, file, network, online, offline, programmer, resource, upload сияқты сөздер технология мен интернетке қатысты қолданылады.</li>
+<li><b>Phrasal verbs</b> — back up, do away with, key in, switch on/off, take apart, test out, use up, wear out сияқты тіркестерді мағынасымен бірге жаттау керек.</li>
+<li><b>Collocations</b> — have access to, break with tradition, change into, keep up to date, meet demand, in reality, serve a purpose, surf the Web сияқты дайын тіркестер өте маңызды.</li>
+<li><b>Idioms</b> — break the mould, change your tune, know something inside out, reinvent the wheel, stick to your guns, turn over a new leaf сияқты idiom-дар өзгеріс пен технология контекстінде қолданылады.</li>
+<li><b>Word formation</b> — adapt → adaptation/adaptable, evolve → evolution, influence → influential, modern → modernise/modernisation, renew → renewable, persist → persistence сияқты формаларға назар аудару керек.</li>
+</ul>
+`,
+russian:`
+<h3>Русское объяснение</h3>
+
+<p><b>Change and technology</b> — это vocabulary unit про изменения, развитие, современные технологии, интернет, прогресс и инновации.</p>
+
+<ul>
+<li><b>Change vocabulary</b>: adapt, adjust, alter, amend, convert, evolve, modify, refine, reform, revise, transform — слова, которые описывают разные типы изменений.</li>
+<li><b>Technology vocabulary</b>: breakthrough, broadband, data, download, file, network, online, offline, programmer, resource, upload — слова, связанные с компьютерами, интернетом и технологиями.</li>
+<li><b>Phrasal verbs</b>: back up, do away with, key in, switch on/off, take apart, test out, use up, wear out — устойчивые сочетания, которые часто встречаются в текстах C1–C2.</li>
+<li><b>Collocations</b>: have access to, break with tradition, change into, keep up to date, meet demand, in reality, serve a purpose, surf the Web — лучше учить как готовые фразы.</li>
+<li><b>Idioms</b>: break the mould, change your tune, know something inside out, reinvent the wheel, stick to your guns, turn over a new leaf — идиомы про перемены, характер и решения.</li>
+<li><b>Word formation</b>: adapt → adaptation/adaptable, evolve → evolution, influence → influential, modern → modernise/modernisation, renew → renewable, persist → persistence.</li>
+</ul>
+`,
+keys:[
+"adapt / adjust: change to fit a new situation",
+"alter / modify / revise: make changes to something",
+"evolve / transform: change or develop over time",
+"breakthrough: important discovery or development",
+"broadband / network / data: technology and internet words",
+"back up: make a copy of information",
+"switch on/off: start or stop a machine working",
+"take apart: separate an object into pieces",
+"keep up to date: stay informed about new changes",
+"turn over a new leaf: start behaving better"
+],
+vocab:[
+["adapt","бейімделу, жағдайға сай өзгеру","адаптироваться, приспосабливаться"],
+["adjust","реттеу, икемдеу","регулировать, приспосабливать"],
+["alter","өзгерту","изменять"],
+["amend","түзету, өзгеріс енгізу","вносить поправки, исправлять"],
+["convert","айналдыру, өзгерту","превращать, конвертировать"],
+["evolve","біртіндеп даму","эволюционировать, постепенно развиваться"],
+["modify","өзгерту, түрлендіру","модифицировать, изменять"],
+["refine","жетілдіру, жақсарту","совершенствовать, улучшать"],
+["reform","реформа жасау, өзгерту","реформировать"],
+["revise","қайта қарау, түзету","пересматривать, исправлять"],
+["transform","түбегейлі өзгерту","преобразовывать"],
+["breakthrough","үлкен жаңалық, серпіліс","прорыв, важное открытие"],
+["broadband","кеңжолақты интернет","широкополосный интернет"],
+["data","деректер, мәліметтер","данные"],
+["download","жүктеп алу","скачивать"],
+["upload","жүктеу, интернетке салу","загружать в интернет"],
+["file","файл","файл"],
+["network","желі","сеть"],
+["online","онлайн, интернетте","онлайн"],
+["offline","офлайн, интернетсіз","офлайн"],
+["programmer","бағдарламашы","программист"],
+["resource","ресурс, қор","ресурс"],
+["back up","көшірме жасау","делать резервную копию"],
+["do away with","жою, алып тастау","избавиться, отменить"],
+["key in","пернетақта арқылы енгізу","вводить с клавиатуры"],
+["switch on/off","қосу/өшіру","включать/выключать"],
+["take apart","бөлшектеу","разбирать на части"],
+["test out","сынап көру","тестировать, пробовать"],
+["use up","толық пайдаланып қою","израсходовать"],
+["wear out","тоздыру, жарамсыз ету","износить"],
+["break the mould","қалыпты бұзу, өзгеше жасау","сломать шаблон"],
+["change your tune","пікірін өзгерту","изменить мнение/тон"],
+["stick to your guns","өз пікірінен қайтпау","стоять на своём"],
+["turn over a new leaf","жаңа өмір бастау, түзелу","начать с чистого листа"]
+],
+questions:[
+{
+q:"Choose the correct option: Companies must ______ quickly to changes in technology.",
+a:"adapt",
+options:["adapt","decay","spoil","distort"],
+e:"Қазақша: adapt — жаңа жағдайға бейімделу. Русский: adapt means change to fit a new situation."
+},
+{
+q:"Choose the correct option: The report was useful, but we need to ______ it before publication.",
+a:"revise",
+options:["revise","sustain","decay","remain"],
+e:"Қазақша: revise — мәтінді қайта қарап, түзету. Русский: revise means review and correct something."
+},
+{
+q:"Choose the correct option: The invention was a major technological ______.",
+a:"breakthrough",
+options:["breakthrough","broadband","manual","resource"],
+e:"Қазақша: breakthrough — маңызды жаңалық немесе үлкен серпіліс. Русский: breakthrough is an important discovery or development."
+},
+{
+q:"Choose the correct option: Please ______ your files before you update the system.",
+a:"back up",
+options:["back up","fade away","turn into","wear out"],
+e:"Қазақша: back up — ақпараттың көшірмесін жасау. Русский: back up means make a copy of digital information."
+},
+{
+q:"Choose the correct option: You need to ______ your password and press Enter.",
+a:"key in",
+options:["key in","take apart","use up","do away with"],
+e:"Қазақша: key in — пернетақтамен енгізу. Русский: key in means enter information using a keyboard."
+},
+{
+q:"Choose the correct option: The old rules should be done ______ because they no longer serve a purpose.",
+a:"away with",
+options:["away with","up with","out of","into"],
+e:"Қазақша: do away with — жою, алып тастау. Русский: correct phrasal verb is do away with."
+},
+{
+q:"Choose the correct option: The new policy represents a break ______ tradition.",
+a:"with",
+options:["with","from","to","for"],
+e:"Қазақша: break with tradition — дәстүрден бас тарту. Русский: correct collocation is break with tradition."
+},
+{
+q:"Choose the correct option: The website gives students access ______ thousands of academic resources.",
+a:"to",
+options:["to","for","with","on"],
+e:"Қазақша: access to — бір нәрсеге қол жеткізу. Русский: correct collocation is access to."
+},
+{
+q:"Choose the correct option: Don’t try to reinvent the ______; use the existing method.",
+a:"wheel",
+options:["wheel","leaf","mould","tune"],
+e:"Қазақша: reinvent the wheel — бұрыннан бар нәрсені қайта ойлап табуға тырысу. Русский: reinvent the wheel means waste effort solving something already solved."
+},
+{
+q:"Choose the correct option: Solar and wind power are examples of ______ energy.",
+a:"renewable",
+options:["renewable","renew","renewal","renewed"],
+e:"Қазақша: energy алдында adjective керек, сондықтан renewable дұрыс. Русский: before energy we need an adjective: renewable energy."
+}
+]
+},
+  {
+id:"unit5",
+title:"Unit 5 — Grammar: Future time",
+type:"Grammar",
+desc:"Will, be going to, Present Continuous, Present Simple, Future Perfect Simple, Future Perfect Continuous, Future Continuous, time clauses and future in the past.",
+kazakh:`
+<h3>Қазақша түсіндіру</h3>
+
+<p><b>Future time</b> — болашақтағы әрекеттерді әртүрлі мағынамен жеткізу үшін қолданылады. Бір болашақ оқиғаны бірнеше форма арқылы айтуға болады, бірақ мағынасы әртүрлі болады.</p>
+
+<ul>
+<li><b>will</b> — болжам, болашақ факт, сөйлеу сәтінде қабылданған шешім, уәде, ұсыныс, өтініш және бас тарту үшін қолданылады.</li>
+<li><b>be going to</b> — қазіргі дәлелге сүйенген болжам және алдын ала ниет үшін қолданылады.</li>
+<li><b>Present Continuous</b> — алдын ала ұйымдастырылған нақты жоспар үшін қолданылады: meeting, arrangement.</li>
+<li><b>Present Simple</b> — кесте, timetable, schedule бойынша болатын болашақ оқиға үшін қолданылады.</li>
+<li><b>Future Perfect Simple</b> — болашақтағы белгілі бір уақытқа дейін аяқталып қоятын әрекетті білдіреді.</li>
+<li><b>Future Perfect Continuous</b> — болашақтағы белгілі бір уақытқа дейін жалғасып тұратын әрекеттің ұзақтығын көрсетеді.</li>
+<li><b>Future Continuous</b> — болашақтағы белгілі бір уақытта болып жатқан процесс немесе қалыпты болашақ әрекет үшін қолданылады.</li>
+<li><b>Time clauses</b> ішінде when, after, before, until, as soon as сияқты сөздерден кейін will қолданылмайды. Оның орнына present forms қолданылады.</li>
+<li><b>Future in the past</b> — өткен уақыттан қарағанда болашақ болған әрекетті білдіреді: will → would, is going to → was going to.</li>
+</ul>
+`,
+russian:`
+<h3>Русское объяснение</h3>
+
+<p><b>Future time</b> показывает будущие действия, планы, прогнозы, расписания и действия, которые завершатся или будут продолжаться к определённому моменту в будущем.</p>
+
+<ul>
+<li><b>will</b> используется для прогнозов, будущих фактов, решений в момент речи, обещаний, предложений, просьб и отказов.</li>
+<li><b>be going to</b> используется для намерений и прогнозов, основанных на текущих доказательствах.</li>
+<li><b>Present Continuous</b> выражает заранее организованную договорённость или план.</li>
+<li><b>Present Simple</b> используется для расписаний, программ и фиксированных будущих событий.</li>
+<li><b>Future Perfect Simple</b> показывает действие, которое завершится к определённому моменту в будущем.</li>
+<li><b>Future Perfect Continuous</b> подчёркивает длительность действия до определённого момента в будущем.</li>
+<li><b>Future Continuous</b> описывает процесс в будущем или действие, которое будет происходить в обычном ходе событий.</li>
+<li><b>Time clauses</b>: после when, after, before, until, as soon as не ставим will; используем Present Simple/Continuous/Perfect.</li>
+<li><b>Future in the past</b>: когда из прошлого говорим о будущем, формы меняются: will → would, going to → was/were going to.</li>
+</ul>
+`,
+keys:[
+"will: prediction, promise, offer, request, instant decision",
+"be going to: intention or prediction based on evidence",
+"Present Continuous: fixed arrangement",
+"Present Simple: timetables and schedules",
+"Future Perfect Simple: will have done",
+"Future Perfect Continuous: will have been doing",
+"Future Continuous: will be doing",
+"Time clauses: no will after when, after, until, as soon as",
+"Future in the past: will → would",
+"be about to / be due to / be to: formal or near future"
+],
+questions:[
+{
+q:"Choose the correct option: Look at those clouds. It ______ soon.",
+a:"is going to rain",
+options:["will rain","is going to rain","rains","will have rained"],
+e:"Қазақша: қазіргі дәлел бар — бұлттар көрініп тұр, сондықтан be going to. Русский: prediction based on present evidence requires be going to."
+},
+{
+q:"Choose the correct option: I forgot to call her. I ______ her now.",
+a:"will call",
+options:["will call","am calling","call","will have called"],
+e:"Қазақша: шешім сөйлеу сәтінде қабылданды, сондықтан will. Русский: instant decision is expressed with will."
+},
+{
+q:"Choose the correct option: The train ______ at 6:30 tomorrow morning.",
+a:"leaves",
+options:["leaves","is leaving","will have left","is going to leave"],
+e:"Қазақша: кесте бойынша болашақ оқиға — Present Simple. Русский: timetables and schedules use Present Simple."
+},
+{
+q:"Choose the correct option: We ______ the director at 10 a.m. on Friday.",
+a:"are meeting",
+options:["meet","are meeting","will have met","will be met"],
+e:"Қазақша: алдын ала келісілген жоспар — Present Continuous. Русский: fixed arrangement is expressed by Present Continuous."
+},
+{
+q:"Choose the correct option: By the end of this month, she ______ the report.",
+a:"will have finished",
+options:["will finish","is finishing","will have finished","will have been finishing"],
+e:"Қазақша: болашақтағы белгілі уақытқа дейін аяқталады — Future Perfect Simple. Русский: completed before a future time requires Future Perfect Simple."
+},
+{
+q:"Choose the correct option: This time next year, I ______ at university for three years.",
+a:"will have been studying",
+options:["will study","am studying","will have studied","will have been studying"],
+e:"Қазақша: болашақтағы уақытқа дейінгі ұзақтық маңызды — Future Perfect Continuous. Русский: duration up to a future moment requires Future Perfect Continuous."
+},
+{
+q:"Choose the correct option: This time tomorrow, we ______ across the country.",
+a:"will be travelling",
+options:["travel","are travelling","will be travelling","will have travelled"],
+e:"Қазақша: болашақтағы нақты уақытта процесс болып жатады — Future Continuous. Русский: action in progress at a future moment uses Future Continuous."
+},
+{
+q:"Choose the correct option: I’ll call you as soon as I ______ the results.",
+a:"receive",
+options:["will receive","receive","am going to receive","will have received"],
+e:"Қазақша: as soon as кейін will қолданылмайды, Present Simple керек. Русский: after as soon as in time clauses we use present forms, not will."
+},
+{
+q:"Choose the correct option: The company announced that the new branch ______ in July.",
+a:"would open",
+options:["will open","would open","opens","has opened"],
+e:"Қазақша: өткен шақтан болашақты айтып тұр, сондықтан will → would. Русский: future in the past changes will to would."
+},
+{
+q:"Choose the correct option: The plane is due ______ at noon.",
+a:"to arrive",
+options:["arrive","arriving","to arrive","arrived"],
+e:"Қазақша: be due to + verb — ресми жоспарланған болашақ. Русский: correct structure is be due to + infinitive."
+}
+]
+},
+{
+id:"unit6",
+title:"Unit 6 — Vocabulary: Time and work",
+type:"Vocabulary",
+desc:"Topic vocabulary, phrasal verbs, collocations, idioms and word formation connected with time, work, employment and career.",
+kazakh:`
+<h3>Қазақша түсіндіру</h3>
+
+<p><b>Time and work</b> unit-ы уақыт, кезең, мерзім, жұмыс, карьера, қызмет, жұмысқа қабылдау және жұмыстан босату тақырыптарына қатысты сөздерді қамтиды.</p>
+
+<ul>
+<li><b>Time vocabulary</b> — abrupt, annual, century, chronological, contemporary, duration, era, expire, interval, lifetime, obsolete, overdue, permanent, punctual, simultaneous, temporary сияқты сөздер уақыт пен кезеңді сипаттайды.</li>
+<li><b>Work vocabulary</b> — civil service, client, colleague, consultant, efficient, executive, fire, headhunt, leave, marketing, promotion, recruit, redundant, sack, strike, union сияқты сөздер жұмыс және карьера контекстінде қолданылады.</li>
+<li><b>Phrasal verbs</b> — crop up, dive in, end up, kick off, knock off, lay off, press ahead/on, set out, take on, wind down сияқты тіркестерді дайын күйінде жаттау керек.</li>
+<li><b>Collocations</b> — do sth about, at/by/from the age of, keep regular hours, get/find/take/do a job, in due course, office hours, from now on, for the time being, work long hours сияқты тіркестер жиі кездеседі.</li>
+<li><b>Idioms</b> — a stitch in time saves nine, all in good time, at the drop of a hat, before your time, for good, from time to time, once in a blue moon, on the spur of the moment сияқты idiom-дар уақыт пен шешімге қатысты қолданылады.</li>
+<li><b>Word formation</b> — apply → application/applicant, employ → employment/unemployment/employer/employee, manage → manager/management, produce → production/productivity, time → timetable/timely/untimely сияқты формаларды білу керек.</li>
+</ul>
+`,
+russian:`
+<h3>Русское объяснение</h3>
+
+<p><b>Time and work</b> — это vocabulary unit про время, периоды, сроки, работу, занятость, карьеру, сотрудников и профессиональную деятельность.</p>
+
+<ul>
+<li><b>Time vocabulary</b>: abrupt, annual, century, chronological, contemporary, duration, era, expire, interval, lifetime, obsolete, overdue, permanent, punctual, simultaneous, temporary — слова для описания времени и периодов.</li>
+<li><b>Work vocabulary</b>: civil service, client, colleague, consultant, efficient, executive, fire, headhunt, leave, marketing, promotion, recruit, redundant, sack, strike, union — слова про работу и карьеру.</li>
+<li><b>Phrasal verbs</b>: crop up, dive in, end up, kick off, knock off, lay off, press ahead/on, set out, take on, wind down — устойчивые фразовые глаголы.</li>
+<li><b>Collocations</b>: keep regular hours, work long hours, get a job, in due course, office hours, from now on, for the time being, in the long term — их лучше учить как готовые выражения.</li>
+<li><b>Idioms</b>: a stitch in time saves nine, all in good time, at the drop of a hat, for good, once in a blue moon, on the spur of the moment — идиомы времени и решения.</li>
+<li><b>Word formation</b>: apply → application/applicant, employ → employment/unemployment, manage → manager/management, produce → production/productivity, work → workplace/overworked.</li>
+</ul>
+`,
+keys:[
+"annual: happening once a year",
+"punctual: arriving or doing something on time",
+"obsolete: no longer used because it is old-fashioned",
+"temporary vs permanent: not lasting vs lasting",
+"recruit: employ someone new",
+"redundant: no longer needed for a job",
+"lay off: end employment temporarily or because of lack of work",
+"take on: employ or accept responsibility",
+"from time to time: sometimes",
+"once in a blue moon: very rarely"
+],
+vocab:[
+["abrupt","кенеттен, аяқ астынан","внезапный, резкий"],
+["annual","жыл сайынғы","ежегодный"],
+["century","ғасыр","век"],
+["chronological","хронологиялық, уақыт ретімен","хронологический"],
+["contemporary","заманауи; бір дәуірдегі","современный; относящийся к одному времени"],
+["duration","ұзақтық","длительность"],
+["era","дәуір, кезең","эра, эпоха"],
+["expire","мерзімі біту","истекать, заканчиваться"],
+["interval","аралық, үзіліс","интервал, промежуток"],
+["lifetime","өмір бойы, өмір ұзақтығы","вся жизнь, срок жизни"],
+["obsolete","ескірген, қолданыстан шыққан","устаревший"],
+["overdue","мерзімі өтіп кеткен","просроченный"],
+["permanent","тұрақты","постоянный"],
+["punctual","уақытында келетін","пунктуальный"],
+["simultaneous","бір уақытта болатын","одновременный"],
+["temporary","уақытша","временный"],
+["civil service","мемлекеттік қызмет","государственная служба"],
+["client","клиент, тапсырыс беруші","клиент"],
+["colleague","әріптес","коллега"],
+["consultant","кеңесші, консультант","консультант"],
+["efficient","тиімді, өнімді","эффективный"],
+["executive","басқарушы қызметкер","руководитель, исполнительный сотрудник"],
+["fire","жұмыстан шығару","увольнять"],
+["headhunt","маман іздеп жұмысқа тарту","переманивать специалиста"],
+["leave","демалыс; кету","отпуск; уход"],
+["marketing","маркетинг","маркетинг"],
+["promotion","қызметте көтерілу","повышение"],
+["recruit","жұмысқа алу","нанимать, принимать на работу"],
+["redundant","қажетсіз болып қалған; қысқартылған","лишний; сокращённый"],
+["sack","жұмыстан шығару","уволить"],
+["strike","ереуіл","забастовка"],
+["union","кәсіподақ","профсоюз"],
+["crop up","кенеттен пайда болу","неожиданно возникнуть"],
+["end up","соңында бір жағдайға келу","в итоге оказаться"],
+["kick off","басталу","начаться"],
+["knock off","жұмысты тоқтату","закончить работу"],
+["lay off","қысқарту, уақытша жұмыстан босату","уволить/сократить из-за нехватки работы"],
+["press ahead/on","қиындыққа қарамай жалғастыру","продолжать несмотря на трудности"],
+["set out","мақсатпен бастау","начать с целью"],
+["take on","жұмысқа алу; жауапкершілік алу","нанимать; брать на себя"],
+["wind down","біртіндеп аяқтау, тынышталу","постепенно завершать, расслабляться"],
+["once in a blue moon","өте сирек","очень редко"],
+["for good","біржола","навсегда"],
+["from time to time","анда-санда","время от времени"]
+],
+questions:[
+{
+q:"Choose the correct option: The report is ______; it should have been submitted last week.",
+a:"overdue",
+options:["overdue","punctual","annual","simultaneous"],
+e:"Қазақша: overdue — мерзімі өтіп кеткен. Русский: overdue means not done or paid by the expected time."
+},
+{
+q:"Choose the correct option: The company is planning to ______ twenty new employees this year.",
+a:"recruit",
+options:["recruit","fire","expire","postpone"],
+e:"Қазақша: recruit — жаңа қызметкерлерді жұмысқа алу. Русский: recruit means employ new people."
+},
+{
+q:"Choose the correct option: Because of falling sales, several workers were ______ off.",
+a:"laid",
+options:["laid","taken","set","wound"],
+e:"Қазақша: lay off — жұмыс аз болғандықтан қызметкерді қысқарту. Русский: correct phrasal verb is lay off."
+},
+{
+q:"Choose the correct option: A problem has cropped ______, so the meeting will start late.",
+a:"up",
+options:["up","off","on","out"],
+e:"Қазақша: crop up — күтпеген мәселе пайда болу. Русский: crop up means appear unexpectedly."
+},
+{
+q:"Choose the correct option: She was promoted because she is extremely ______ at organising projects.",
+a:"efficient",
+options:["efficient","obsolete","temporary","annual"],
+e:"Қазақша: efficient — жұмысты тиімді әрі жақсы орындау. Русский: efficient means working well without wasting time or resources."
+},
+{
+q:"Choose the correct option: This software is now ______; nobody uses it anymore.",
+a:"obsolete",
+options:["obsolete","punctual","simultaneous","permanent"],
+e:"Қазақша: obsolete — ескірген, қолданыстан шыққан. Русский: obsolete means no longer used because it is old-fashioned."
+},
+{
+q:"Choose the correct option: The new manager will take ______ responsibility for the whole department.",
+a:"on",
+options:["on","off","up","out"],
+e:"Қазақша: take on responsibility — жауапкершілік алу. Русский: correct collocation/phrasal verb is take on responsibility."
+},
+{
+q:"Choose the correct option: I only visit that office once in a blue ______.",
+a:"moon",
+options:["moon","time","hat","moment"],
+e:"Қазақша: once in a blue moon — өте сирек. Русский: once in a blue moon means very rarely."
+},
+{
+q:"Choose the correct option: The factory closed for ______ after years of financial problems.",
+a:"good",
+options:["good","time","course","age"],
+e:"Қазақша: for good — біржола. Русский: for good means permanently."
+},
+{
+q:"Choose the correct option: Her job ______ was accepted yesterday.",
+a:"application",
+options:["apply","application","applicant","applicable"],
+e:"Қазақша: job application — жұмысқа өтініш. Русский: after job we need the noun application."
+}
+]
+},
+  {
+id:"unit7",
+title:"Unit 7 — Grammar: Passives and causatives",
+type:"Grammar",
+desc:"The passive, impersonal passive, direct and indirect object, avoiding the passive, and causative structures with get/have.",
+kazakh:`
+<h3>Қазақша түсіндіру</h3>
+
+<p><b>Passives and causatives</b> — passive voice және causative structures туралы unit. Бұл тақырып академиялық және формалды ағылшын тілінде өте маңызды.</p>
+
+<ul>
+<li><b>Passive voice</b> — әрекетті кім жасағаны белгісіз, маңызды емес немесе obvious болғанда қолданылады. Негізгі форма: <b>be + past participle</b>.</li>
+<li>Passive жаңа ақпаратты сөйлем соңына қоюға және формалды стиль жасауға көмектеседі.</li>
+<li><b>Impersonal passive</b> — people say / believe / think сияқты құрылымдардың формалды нұсқасы: <i>It is believed that...</i>, <i>He is believed to...</i></li>
+<li><b>Direct and indirect object</b>: кейбір етістіктер екі passive форма бере алады: <i>Jill was given the tickets</i> немесе <i>The tickets were given to Jill</i>.</li>
+<li><b>Avoiding the passive</b>: кейбір continuous perfect формаларда passive табиғи емес болады, сондықтан <i>under construction, in progress, on display, under consideration</i> сияқты тіркестер қолданылады.</li>
+<li><b>Causative have/get something done</b> — бір нәрсені өзің істемей, басқа адамға істету немесе өзіңмен болған жағдайды айту: <i>I had my phone repaired</i>.</li>
+<li><b>get/have somebody to do / do</b>: <i>get somebody to do</i>, бірақ <i>have somebody do</i>.</li>
+</ul>
+`,
+russian:`
+<h3>Русское объяснение</h3>
+
+<p><b>Passives and causatives</b> — это тема про страдательный залог и конструкции, где действие выполняет другой человек.</p>
+
+<ul>
+<li><b>Passive voice</b> используется, когда исполнитель действия неизвестен, очевиден или не важен. Форма: <b>be + past participle</b>.</li>
+<li>Passive часто используется в формальном и академическом стиле.</li>
+<li><b>Impersonal passive</b>: формальные конструкции типа <i>It is believed that...</i>, <i>He is said to...</i>, <i>There are thought to be...</i>.</li>
+<li><b>Direct and indirect object</b>: с некоторыми глаголами возможны две пассивные структуры: <i>She was sent a letter</i> / <i>A letter was sent to her</i>.</li>
+<li><b>Avoiding the passive</b>: иногда вместо тяжёлого passive лучше использовать фразы <i>under construction, in progress, on display, under consideration</i>.</li>
+<li><b>Causative have/get something done</b>: действие организовано для нас или произошло с нами: <i>I had my car fixed</i>, <i>She got her phone stolen</i>.</li>
+<li><b>get/have somebody do something</b>: <i>get someone to do</i>, но <i>have someone do</i>.</li>
+</ul>
+`,
+keys:[
+"Passive: be + past participle",
+"Use passive when the agent is unknown, obvious or unimportant",
+"Impersonal passive: It is believed that...",
+"Personal passive: He is believed to...",
+"Direct/indirect object: She was given a ticket",
+"Avoid heavy passive: under construction, in progress",
+"Causative: have/get something done",
+"get somebody to do something",
+"have somebody do something",
+"Agent with by; instrument/material with with"
+],
+questions:[
+{
+q:"Choose the correct option: The new airport terminal ______ next year.",
+a:"will be opened",
+options:["will open","will be opened","has opened","is opening"],
+e:"Қазақша: терминалды біреу ашады, объект маңызды, сондықтан passive: will be opened. Русский: terminal receives the action, so Future Passive is needed."
+},
+{
+q:"Choose the correct option: The stolen documents ______ in an empty office yesterday.",
+a:"were found",
+options:["found","were found","have found","were finding"],
+e:"Қазақша: documents әрекетті өзі жасамайды, олар табылды. Русский: documents are the object, so Past Passive: were found."
+},
+{
+q:"Choose the correct option: It ______ that the company will create 500 new jobs.",
+a:"is expected",
+options:["expects","is expected","has expected","is expecting"],
+e:"Қазақша: impersonal passive — It is expected that... Русский: formal reporting structure uses It is expected that..."
+},
+{
+q:"Choose the correct option: The minister is believed ______ abroad.",
+a:"to have travelled",
+options:["to travel","to have travelled","travelling","travelled"],
+e:"Қазақша: өткен әрекет туралы passive reporting: is believed to have done. Русский: for a previous action after reporting passive, use perfect infinitive."
+},
+{
+q:"Choose the correct option: Jill ______ the plane tickets by Michael.",
+a:"was given",
+options:["gave","was given","was giving","has given"],
+e:"Қазақша: Jill indirect object ретінде passive subject болды. Русский: indirect object can become passive subject: Jill was given..."
+},
+{
+q:"Choose the correct option: The new bridge has been ______ construction for two years.",
+a:"under",
+options:["under","in","on","with"],
+e:"Қазақша: under construction — салынып жатыр. Русский: fixed phrase: under construction."
+},
+{
+q:"Choose the correct option: I need to have my laptop ______ before the exam.",
+a:"repaired",
+options:["repair","to repair","repaired","repairing"],
+e:"Қазақша: have something done құрылымы: have + object + past participle. Русский: causative structure requires past participle."
+},
+{
+q:"Choose the correct option: We finally got the mechanic ______ the engine.",
+a:"to check",
+options:["check","to check","checked","checking"],
+e:"Қазақша: get somebody to do something. Русский: after get + person we use to-infinitive."
+},
+{
+q:"Choose the correct option: The teacher had the students ______ the task again.",
+a:"do",
+options:["do","to do","done","doing"],
+e:"Қазақша: have somebody do something, to қолданылмайды. Русский: after have + person use bare infinitive."
+},
+{
+q:"Choose the correct option: The room was filled ______ smoke.",
+a:"with",
+options:["by","with","to","from"],
+e:"Қазақша: материал/зат үшін with қолданылады. Русский: with is used for material/content, not by."
+}
+]
+},
+{
+id:"unit8",
+title:"Unit 8 — Vocabulary: Movement and transport",
+type:"Vocabulary",
+desc:"Topic vocabulary, phrasal verbs, collocations, idioms and word formation connected with movement, transport, travel and direction.",
+kazakh:`
+<h3>Қазақша түсіндіру</h3>
+
+<p><b>Movement and transport</b> unit-ы қозғалыс, бағыт, көлік, саяхат және орын ауыстыруға қатысты сөздерді қамтиды.</p>
+
+<ul>
+<li><b>Movement vocabulary</b> — accelerate, approach, ascend, bounce, crawl, creep, dash, descend, drift, glide, grab, grasp, hop, leap, march, migrate, rotate, slide, slip, stride, wander сияқты сөздер қозғалыстың нақты түрін білдіреді.</li>
+<li><b>Transport vocabulary</b> — airline, cargo, carriage, charter, commute, destination, hiker, hitchhiker, jet lag, legroom, passenger, pedestrian, pier, quay, return fare, round trip, steward сияқты сөздер көлік және жол жүрумен байланысты.</li>
+<li><b>Phrasal verbs</b> — cordon off, creep up on, fall behind, go astray, head off, hold back, move in, move on, pull over, step aside, stop off, walk out сияқты тіркестерді мағынасымен бірге есте сақтау керек.</li>
+<li><b>Collocations</b> — come to a conclusion, drive somebody crazy, fall in love, get going, get a move on, jump at the chance, lose track of time, raise your hand, run the risk of сияқты тіркестер жиі кездеседі.</li>
+<li><b>Idioms</b> — a stone’s throw, as the crow flies, follow your nose, in the middle of nowhere, lose your bearings, off the beaten track, take a short cut, take the scenic route.</li>
+<li><b>Word formation</b> — access → accessibility, move → movement/movable, pass → passage/passenger, progress → progression, stable → unstable, transit → transition сияқты формалар маңызды.</li>
+</ul>
+`,
+russian:`
+<h3>Русское объяснение</h3>
+
+<p><b>Movement and transport</b> — это vocabulary unit про движение, транспорт, путешествия, направление и перемещение.</p>
+
+<ul>
+<li><b>Movement vocabulary</b>: accelerate, approach, ascend, crawl, creep, dash, descend, drift, glide, grab, hop, leap, migrate, rotate, slide, slip, stride, wander — слова для разных типов движения.</li>
+<li><b>Transport vocabulary</b>: airline, cargo, carriage, charter, commute, destination, hiker, hitchhiker, jet lag, legroom, passenger, pedestrian, pier, quay, return fare, round trip, steward.</li>
+<li><b>Phrasal verbs</b>: cordon off, creep up on, fall behind, go astray, head off, hold back, move in, move on, pull over, step aside, stop off, walk out.</li>
+<li><b>Collocations</b>: drive somebody crazy, fall in love, get going, get a move on, jump at the chance, lose track of time, raise your hand, run the risk of.</li>
+<li><b>Idioms</b>: a stone’s throw, as the crow flies, follow your nose, in the middle of nowhere, lose your bearings, off the beaten track, take a short cut, take the scenic route.</li>
+<li><b>Word formation</b>: access → accessibility, move → movement, pass → passenger/passage, stable → unstable, transit → transition.</li>
+</ul>
+`,
+keys:[
+"accelerate: increase speed",
+"ascend / descend: go up / go down",
+"crawl / creep: move slowly",
+"dash / stride / wander: different ways of moving",
+"commute: travel regularly to work",
+"passenger vs pedestrian: traveller vs person walking",
+"cordon off: block an area",
+"pull over: stop at the side of the road",
+"off the beaten track: away from popular places",
+"take a short cut: use a quicker route"
+],
+vocab:[
+["accelerate","жылдамдықты арттыру","ускоряться"],
+["approach","жақындау","приближаться"],
+["ascend","жоғары көтерілу","подниматься"],
+["bounce","секіру, ыршу","отскакивать, подпрыгивать"],
+["crawl","еңбектеу, өте баяу қозғалу","ползти, двигаться медленно"],
+["creep","ақырын, білдірмей қозғалу","красться"],
+["dash","жүгіріп кету, асығу","броситься, рвануть"],
+["descend","төмен түсу","спускаться"],
+["drift","ағып кету, бағытсыз қозғалу","дрейфовать"],
+["glide","сырғу, жай қозғалу","скользить, плавно двигаться"],
+["grab","ұстап алу","схватить"],
+["grasp","мықтап ұстау; түсіну","схватить; понять"],
+["hop","бір аяқпен секіру","прыгать на одной ноге"],
+["leap","секіру","прыгнуть"],
+["march","саппен жүру","маршировать"],
+["migrate","қоныс аудару","мигрировать"],
+["rotate","айналу","вращаться"],
+["slide","сырғу","скользить"],
+["slip","тайып кету","поскользнуться"],
+["stride","үлкен адыммен жүру","шагать широким шагом"],
+["wander","қаңғып жүру, мақсатсыз жүру","бродить"],
+["airline","әуе компаниясы","авиакомпания"],
+["cargo","жүк","груз"],
+["carriage","вагон","вагон"],
+["commute","жұмысқа қатынау","ездить на работу"],
+["destination","баратын жер","пункт назначения"],
+["hiker","жаяу саяхатшы","пеший турист"],
+["hitchhiker","жолай көлік тоқтатып жүретін жолаушы","автостопщик"],
+["jet lag","ұшудан кейінгі уақыт айырмасынан шаршау","джетлаг"],
+["legroom","аяққа арналған орын","пространство для ног"],
+["passenger","жолаушы","пассажир"],
+["pedestrian","жаяу жүргінші","пешеход"],
+["pier","пирс","пирс"],
+["quay","айлақ","набережная, причал"],
+["return fare","барып-қайту билеті","стоимость билета туда-обратно"],
+["round trip","барып-қайту сапары","поездка туда и обратно"],
+["cordon off","аймақты қоршау","оцепить территорию"],
+["fall behind","артта қалу","отставать"],
+["pull over","жол шетіне тоқтау","съехать на обочину"],
+["walk out","шығып кету","уйти в знак протеста"]
+],
+questions:[
+{
+q:"Choose the correct option: The car began to ______ as it joined the motorway.",
+a:"accelerate",
+options:["accelerate","descend","wander","grasp"],
+e:"Қазақша: motorway-ға кіргенде жылдамдық артады — accelerate. Русский: accelerate means increase speed."
+},
+{
+q:"Choose the correct option: The plane started to ______ towards the runway.",
+a:"descend",
+options:["descend","march","grab","bounce"],
+e:"Қазақша: ұшақ runway-ға қарай төмен түседі. Русский: descend means go down."
+},
+{
+q:"Choose the correct option: We had to ______ to work by train every day.",
+a:"commute",
+options:["commute","migrate","rotate","clutch"],
+e:"Қазақша: commute — күнде жұмысқа қатынау. Русский: commute means travel regularly between home and work."
+},
+{
+q:"Choose the correct option: After the accident, the police cordoned ______ the street.",
+a:"off",
+options:["off","up","over","in"],
+e:"Қазақша: cordon off — аймақты қоршау. Русский: correct phrasal verb is cordon off."
+},
+{
+q:"Choose the correct option: The driver pulled ______ when he heard the police siren.",
+a:"over",
+options:["over","out","away","in"],
+e:"Қазақша: pull over — жол шетіне тоқтау. Русский: pull over means stop at the side of the road."
+},
+{
+q:"Choose the correct option: We got lost and completely lost our ______.",
+a:"bearings",
+options:["bearings","tracks","routes","wheels"],
+e:"Қазақша: lose your bearings — қайда тұрғаныңды білмей қалу. Русский: lose your bearings means become confused about direction."
+},
+{
+q:"Choose the correct option: Their house is only a stone’s ______ from the station.",
+a:"throw",
+options:["throw","route","track","way"],
+e:"Қазақша: a stone’s throw — өте жақын. Русский: a stone’s throw means very close."
+},
+{
+q:"Choose the correct option: We decided to take a short ______ to avoid the traffic.",
+a:"cut",
+options:["cut","track","route","point"],
+e:"Қазақша: take a short cut — қысқа жолмен жүру. Русский: short cut means a quicker route."
+},
+{
+q:"Choose the correct option: The airport was full of tired ______ waiting for delayed flights.",
+a:"passengers",
+options:["passengers","pedestrians","hikers","stewards"],
+e:"Қазақша: airport-та flight күтіп отырғандар — passengers. Русский: passengers are people travelling by vehicle/plane."
+},
+{
+q:"Choose the correct option: The path was wet, and I ______ on the mud.",
+a:"slipped",
+options:["slipped","grasped","waved","marched"],
+e:"Қазақша: wet path-та тайып кету — slip. Русский: slip means slide accidentally."
+}
+]
+},
+  {
+id:"unit9",
+title:"Unit 9 — Grammar: Modals and semi-modals",
+type:"Grammar",
+desc:"Ability, permission, advice, criticism, obligation, degrees of certainty, modal perfect and semi-modals.",
+kazakh:`
+<h3>Қазақша түсіндіру</h3>
+
+<p><b>Modals and semi-modals</b> — can, could, may, might, must, should, ought to, have to, need to, had better сияқты құрылымдар. Олар қабілет, рұқсат, кеңес, міндет, болжам, сенімділік және сын айту мағыналарын береді.</p>
+
+<ul>
+<li><b>Ability</b> — can/could/be able to арқылы қабілет айтылады. Бір нақты өткен жағдайда “managed to / was able to” жиі қолданылады.</li>
+<li><b>Permission</b> — can, could, may арқылы рұқсат сұрау немесе беру. May формалдырақ.</li>
+<li><b>Advice</b> — should, ought to, had better арқылы кеңес беріледі. Had better көбіне ескерту сияқты күшті мағына береді.</li>
+<li><b>Criticism</b> — should have / ought to have / could have / might have өткен әрекетті сынау үшін қолданылады.</li>
+<li><b>Obligation</b> — must, have to, need to міндетті білдіреді. Must көбіне сөйлеушінің өз шешімі, have to сыртқы міндет.</li>
+<li><b>Lack of obligation</b> — don’t have to / don’t need to / needn’t міндет жоқ екенін білдіреді.</li>
+<li><b>Degrees of certainty</b> — must, can’t, may, might, could арқылы сенімділік, ықтималдық, мүмкіндік айтылады.</li>
+<li><b>Modal perfect</b> — modal + have + past participle өткенге қатысты болжам, өкініш, сын немесе мүмкіндік білдіреді.</li>
+</ul>
+`,
+russian:`
+<h3>Русское объяснение</h3>
+
+<p><b>Modals and semi-modals</b> выражают способность, разрешение, совет, обязанность, критику, вероятность и степень уверенности.</p>
+
+<ul>
+<li><b>Ability</b>: can/could/be able to. Для одного конкретного успешного действия в прошлом часто используется was/were able to или managed to.</li>
+<li><b>Permission</b>: can, could, may. May более формальное.</li>
+<li><b>Advice</b>: should, ought to, had better. Had better звучит сильнее и часто содержит предупреждение.</li>
+<li><b>Criticism</b>: should have / ought to have / could have / might have используются для критики прошлого действия.</li>
+<li><b>Obligation</b>: must, have to, need to. Must чаще личное обязательство говорящего, have to — внешняя необходимость.</li>
+<li><b>Lack of obligation</b>: don’t have to, don’t need to, needn’t — нет необходимости.</li>
+<li><b>Degrees of certainty</b>: must, can’t, may, might, could показывают уверенность или вероятность.</li>
+<li><b>Modal perfect</b>: modal + have + past participle используется для прошлого: must have done, can’t have done, should have done, might have done.</li>
+</ul>
+`,
+keys:[
+"can / could / be able to: ability",
+"may / could / can: permission",
+"should / ought to / had better: advice",
+"should have done: criticism of the past",
+"must / have to / need to: obligation",
+"don’t have to / needn’t: lack of obligation",
+"must have done: strong deduction about the past",
+"can’t have done: impossible in the past",
+"may/might/could have done: possibility in the past",
+"had better + bare infinitive"
+],
+questions:[
+{
+q:"Choose the correct option: In a thousand years, humans ______ travel faster than light.",
+a:"may be able to",
+options:["may be able to","can to","will can","could to"],
+e:"Қазақша: can future infinitive ретінде қолданылмайды, сондықтан be able to керек. Русский: can has no infinitive/future form, so use be able to."
+},
+{
+q:"Choose the correct option: Luckily, we ______ finish the report before the deadline.",
+a:"managed to",
+options:["could","managed to","can","may"],
+e:"Қазақша: нақты өткен сәтте сәтті орындау — managed to. Русский: for a specific successful past action, use managed to / was able to."
+},
+{
+q:"Choose the correct option: ______ I ask you a personal question?",
+a:"May",
+options:["Must","May","Need","Had"],
+e:"Қазақша: may рұқсат сұраудың формалды түрі. Русский: may is formal for asking permission."
+},
+{
+q:"Choose the correct option: You ______ better check the facts before publishing the article.",
+a:"had",
+options:["should","had","must","may"],
+e:"Қазақша: had better + verb — күшті кеңес/ескерту. Русский: correct structure is had better + bare infinitive."
+},
+{
+q:"Choose the correct option: You ______ have told me you were going to be late.",
+a:"should",
+options:["should","must","need","can"],
+e:"Қазақша: should have told — өткен әрекетке сын/өкініш. Русский: should have done criticises or regrets a past action."
+},
+{
+q:"Choose the correct option: Students ______ bring dictionaries; the exam provides all materials.",
+a:"don’t have to",
+options:["mustn’t","don’t have to","had better not","couldn’t"],
+e:"Қазақша: don’t have to — міндет жоқ. Mustn’t — тыйым. Русский: don’t have to means lack of obligation; mustn’t means prohibition."
+},
+{
+q:"Choose the correct option: You ______ smoke in this building. It’s forbidden.",
+a:"mustn’t",
+options:["don’t have to","mustn’t","needn’t","couldn’t"],
+e:"Қазақша: тыйым үшін mustn’t қолданылады. Русский: mustn’t expresses prohibition."
+},
+{
+q:"Choose the correct option: She ______ be at home; the lights are on.",
+a:"must",
+options:["must","can’t","needn’t","shouldn’t"],
+e:"Қазақша: нақты дәлелге сүйенген күшті болжам — must. Русский: must expresses strong deduction."
+},
+{
+q:"Choose the correct option: He ______ have stolen the file; he was abroad that day.",
+a:"can’t",
+options:["must","can’t","should","needn’t"],
+e:"Қазақша: өткенде мүмкін емес болған әрекет — can’t have done. Русский: can’t have done means it was impossible in the past."
+},
+{
+q:"Choose the correct option: You ______ have bought more food; nobody ate anything.",
+a:"needn’t",
+options:["needn’t","mustn’t","couldn’t","may not"],
+e:"Қазақша: needn’t have done — қажет емес еді, бірақ істеді. Русский: needn’t have done means the action was unnecessary but happened."
+}
+]
+},
+{
+id:"unit10",
+title:"Unit 10 — Vocabulary: Communication and the media",
+type:"Vocabulary",
+desc:"Topic vocabulary, phrasal verbs, collocations, idioms and word formation connected with communication, language, journalism and media.",
+kazakh:`
+<h3>Қазақша түсіндіру</h3>
+
+<p><b>Communication and the media</b> unit-ы сөйлесу, ақпарат жеткізу, медиа, журналистика, жазу және жариялау тақырыптарына қатысты vocabulary береді.</p>
+
+<ul>
+<li><b>Communication vocabulary</b> — allege, assert, boast, clarify, comprehend, confide, confirm, convey, declare, disclose, exaggerate, hint, insist, mumble, murmur, rant, rave, relevant, vague сияқты сөздер ақпарат айту, түсіндіру, дәлелдеу және пікір білдіру үшін қолданылады.</li>
+<li><b>Media vocabulary</b> — anchor, broadcast, caption, columnist, correspondent, coverage, critic, footnote, ghostwriter, handbook, manifesto, novelist, reviewer, subtitles, supplement, tabloid, trailer сияқты сөздер журналистика және медиаға қатысты.</li>
+<li><b>Phrasal verbs</b> — blurt out, catch on, come out, dry up, get across, get around, let on, pass on, put across/over, set down, shout down, speak out, talk over, talk round.</li>
+<li><b>Collocations</b> — answer to, get into an argument, ask for trouble, read between the lines, put pen to paper, speak your mind, tell the truth, word for word, write for a magazine сияқты тіркестерді дайын күйінде білу керек.</li>
+<li><b>Idioms</b> — big mouth, come clean, get/catch somebody’s drift, get something off your chest, get the wrong end of the stick, give somebody your word, hear through the grapevine, keep somebody posted, lay your cards on the table, speak volumes.</li>
+<li><b>Word formation</b> — declare → declaration, edit → editor/editorial, express → expression, imply → implication, insist → insistence, publish → publication, speak → speech/speaker, write → writer/written.</li>
+</ul>
+`,
+russian:`
+<h3>Русское объяснение</h3>
+
+<p><b>Communication and the media</b> — это vocabulary unit про общение, язык, журналистику, СМИ, публикации и передачу информации.</p>
+
+<ul>
+<li><b>Communication vocabulary</b>: allege, assert, boast, clarify, comprehend, confide, confirm, convey, declare, disclose, exaggerate, hint, insist, mumble, murmur, rant, rave, relevant, vague — слова для выражения информации, мнения и позиции.</li>
+<li><b>Media vocabulary</b>: anchor, broadcast, caption, columnist, correspondent, coverage, critic, footnote, ghostwriter, handbook, manifesto, novelist, reviewer, subtitles, supplement, tabloid, trailer.</li>
+<li><b>Phrasal verbs</b>: blurt out, catch on, come out, dry up, get across, get around, let on, pass on, put across/over, set down, shout down, speak out, talk over, talk round.</li>
+<li><b>Collocations</b>: answer to, get into an argument, ask for trouble, read between the lines, put pen to paper, speak your mind, tell the truth, word for word, write for a magazine.</li>
+<li><b>Idioms</b>: come clean, get your drift, get something off your chest, get the wrong end of the stick, give your word, hear through the grapevine, keep someone posted, lay your cards on the table, speak volumes.</li>
+<li><b>Word formation</b>: declare → declaration, edit → editor, express → expression, imply → implication, publish → publication, speak → speech, write → writer.</li>
+</ul>
+`,
+keys:[
+"allege: claim without proof",
+"assert: state firmly",
+"clarify: make clear",
+"convey: communicate a message",
+"disclose: reveal information",
+"exaggerate: make something seem bigger than it is",
+"get across: make someone understand",
+"blurt out: say suddenly without thinking",
+"come clean: tell the truth",
+"get the wrong end of the stick: misunderstand"
+],
+vocab:[
+["allege","дәлелсіз мәлімдеу","утверждать без доказательств"],
+["assert","нық айту, мәлімдеу","утверждать, заявлять"],
+["boast","мақтану","хвастаться"],
+["clarification","түсіндіру, нақтылау","разъяснение, уточнение"],
+["comprehend","түсіну","понимать"],
+["confide","сыр айту, сеніп айту","доверять секрет"],
+["confirm","растау","подтверждать"],
+["convey","жеткізу, білдіру","передавать, выражать"],
+["declare","жариялау, мәлімдеу","объявлять, заявлять"],
+["disclose","ашу, жария ету","раскрывать информацию"],
+["exaggerate","асыра айту","преувеличивать"],
+["hint","ишара жасау, тұспалдау","намекать"],
+["insist","талап ету, айтқанынан қайтпау","настаивать"],
+["mumble","міңгірлеу","бормотать"],
+["murmur","сыбырлау, күбірлеу","шептать, бормотать"],
+["rant","ашуланып ұзақ сөйлеу","гневно разглагольствовать"],
+["rave","тамсана айту; сандырақтау","восторгаться; бредить"],
+["relevant","қатысты, маңызды","относящийся к делу"],
+["vague","анық емес, бұлыңғыр","неясный, расплывчатый"],
+["anchor","тележүргізуші","ведущий новостей"],
+["broadcast","эфирге шығару","транслировать"],
+["caption","сурет астындағы жазу","подпись к изображению"],
+["columnist","колумнист","колумнист"],
+["correspondent","тілші","корреспондент"],
+["coverage","ақпараттық қамту","освещение в СМИ"],
+["critic","сыншы","критик"],
+["footnote","сілтеме, төменгі ескертпе","сноска"],
+["ghostwriter","басқа адамның атынан жазушы","литературный негр, автор-призрак"],
+["manifesto","манифест, бағдарлама","манифест"],
+["novelist","роман жазушы","романист"],
+["reviewer","пікір жазушы, рецензент","рецензент"],
+["subtitles","субтитрлер","субтитры"],
+["tabloid","таблоид, сары басылым","таблоид"],
+["trailer","трейлер","трейлер"],
+["blurt out","ойланбай айтып қою","выпалить"],
+["dry up","сөйлей алмай қалу","замолчать, забыть слова"],
+["get across","түсіндіре алу, жеткізу","донести мысль"],
+["let on","сырды айтып қою","проговориться"],
+["pass on","жеткізу, беру","передать"],
+["speak out","ашық айту","выступить открыто"],
+["talk over","талқылау","обсудить"],
+["come clean","шындықты айту","признаться, рассказать правду"],
+["keep someone posted","хабардар етіп отыру","держать в курсе"]
+],
+questions:[
+{
+q:"Choose the correct option: The journalist ______ that the minister had accepted illegal payments.",
+a:"alleged",
+options:["alleged","boasted","mumbled","flattered"],
+e:"Қазақша: allege — дәлел толық болмаса да, айыптау/мәлімдеу. Русский: allege means claim something, often without proof."
+},
+{
+q:"Choose the correct option: Could you ______ what you mean by “editorial policy”?",
+a:"clarify",
+options:["clarify","exaggerate","rant","boast"],
+e:"Қазақша: clarify — түсіндіру, нақтылау. Русский: clarify means make something clearer."
+},
+{
+q:"Choose the correct option: She refused to ______ confidential information to the press.",
+a:"disclose",
+options:["disclose","mumble","rave","stutter"],
+e:"Қазақша: disclose — жасырын ақпаратты ашу. Русский: disclose means reveal information."
+},
+{
+q:"Choose the correct option: He always ______ his achievements, so people think he is arrogant.",
+a:"boasts about",
+options:["boasts about","confides in","stumbles over","scribbles on"],
+e:"Қазақша: boast about — мақтану. Русский: boast about means talk proudly about yourself."
+},
+{
+q:"Choose the correct option: I tried to explain my idea, but I couldn’t get it ______.",
+a:"across",
+options:["across","around","over with","down"],
+e:"Қазақша: get across — ойды түсіндіре алу. Русский: get across means make someone understand."
+},
+{
+q:"Choose the correct option: I knew it was a secret, but I accidentally blurted it ______.",
+a:"out",
+options:["out","up","over","down"],
+e:"Қазақша: blurt out — ойланбай айтып қою. Русский: blurt out means say suddenly without thinking."
+},
+{
+q:"Choose the correct option: Please keep me ______ about any changes in the schedule.",
+a:"posted",
+options:["posted","spoken","printed","captioned"],
+e:"Қазақша: keep someone posted — хабардар етіп отыру. Русский: keep someone posted means keep someone informed."
+},
+{
+q:"Choose the correct option: I think you’ve got the wrong end of the ______.",
+a:"stick",
+options:["stick","card","mouth","grapevine"],
+e:"Қазақша: get the wrong end of the stick — дұрыс түсінбеу. Русский: this idiom means misunderstand completely."
+},
+{
+q:"Choose the correct option: The film had English ______ for international viewers.",
+a:"subtitles",
+options:["subtitles","footnotes","captions","supplements"],
+e:"Қазақша: subtitles — фильмдегі жазбаша аударма. Русский: subtitles are written text for dialogue in films."
+},
+{
+q:"Choose the correct option: The editor asked for a more precise ______ of the problem.",
+a:"statement",
+options:["state","statement","stately","stated"],
+e:"Қазақша: precise кейін noun керек, сондықтан statement. Русский: we need a noun here: statement."
+}
+]
+},
+  {
+id:"unit11",
+title:"Unit 11 — Grammar: Conditionals",
+type:"Grammar",
+desc:"Zero, first, second, third and mixed conditionals, inverted conditionals, other conditional structures and other uses of if.",
+kazakh:`
+<h3>Қазақша түсіндіру</h3>
+
+<p><b>Conditionals</b> — шартты сөйлемдер. Олар “егер ... болса, ... болады/болар еді/болған болар еді” деген мағынаны береді.</p>
+
+<ul>
+<li><b>Zero conditional</b> — жалпы факт, ғылыми шындық, анықтама үшін қолданылады: <i>If/When + Present, Present</i>.</li>
+<li><b>First conditional</b> — қазіргі немесе болашақтағы нақты мүмкін шарт және оның нәтижесі: <i>If + Present, will + verb</i>. Will орнына can, may, might, should, have to да келе алады.</li>
+<li><b>Second conditional</b> — қазіргі немесе болашақтағы гипотетикалық/шындыққа жақын емес жағдай: <i>If + Past Simple, would + verb</i>.</li>
+<li><b>Third conditional</b> — өткенде болмаған жағдай және оның өткендегі гипотетикалық нәтижесі: <i>If + Past Perfect, would have + past participle</i>.</li>
+<li><b>Mixed conditionals</b> — бір бөлігі өткенге, екінші бөлігі қазіргі нәтижеге қатысты болады: <i>If I hadn’t missed the bus, I would be there now</i>.</li>
+<li><b>Inverted conditionals</b> — формалды стильде if түсіп қалып, көмекші етістік басына шығады: <i>Had I known...</i>, <i>Were I you...</i>, <i>Should you need...</i>.</li>
+<li><b>Other conditional structures</b> — as long as, provided that, on condition that, unless, in case, otherwise, but for, if it hadn’t been for сияқты құрылымдар шарт мағынасын береді.</li>
+<li><b>Other uses of if</b> — if әрқашан шарт емес: кейде “егер рас болса”, “егер қарсы болмасаң”, “сөз арасында айтсам” деген мағына береді.</li>
+</ul>
+`,
+russian:`
+<h3>Русское объяснение</h3>
+
+<p><b>Conditionals</b> — это условные предложения. Они показывают условие и результат.</p>
+
+<ul>
+<li><b>Zero conditional</b> используется для общих фактов и научных истин: <i>If/When + Present, Present</i>.</li>
+<li><b>First conditional</b> используется для реального условия в настоящем или будущем: <i>If + Present, will + verb</i>. Вместо will могут быть can, may, might, should, have to.</li>
+<li><b>Second conditional</b> описывает гипотетическую ситуацию в настоящем или будущем: <i>If + Past Simple, would + verb</i>.</li>
+<li><b>Third conditional</b> описывает нереальное условие в прошлом и его нереальный результат: <i>If + Past Perfect, would have + past participle</i>.</li>
+<li><b>Mixed conditionals</b> смешивают время условия и результата, например прошлое условие + настоящий результат.</li>
+<li><b>Inverted conditionals</b> — формальный вариант без if: <i>Had I known...</i>, <i>Were I you...</i>, <i>Should you need...</i>.</li>
+<li><b>Other structures</b>: as long as, provided that, on condition that, unless, in case, otherwise, but for, if it hadn’t been for.</li>
+<li><b>Other uses of if</b>: if может означать “если это правда”, “если вы готовы”, “кстати/раз уж говорим”.</li>
+</ul>
+`,
+keys:[
+"Zero conditional: If/When + Present, Present",
+"First conditional: If + Present, will + verb",
+"Second conditional: If + Past Simple, would + verb",
+"Third conditional: If + Past Perfect, would have + past participle",
+"Mixed conditional: past condition + present result",
+"Inversion: Had I known..., Were I you..., Should you need...",
+"unless = if not",
+"provided/providing that = if and only if",
+"in case = because something may happen",
+"otherwise = if not, or else"
+],
+questions:[
+{
+q:"Choose the correct option: If you heat water to 100°C, it ______.",
+a:"boils",
+options:["boils","will boil","would boil","would have boiled"],
+e:"Қазақша: жалпы ғылыми факт, сондықтан Zero Conditional: Present + Present. Русский: this is a general fact, so use Zero Conditional."
+},
+{
+q:"Choose the correct option: If we continue to pollute the river, many species ______.",
+a:"will disappear",
+options:["disappear","will disappear","would disappear","would have disappeared"],
+e:"Қазақша: нақты болашақ нәтиже, First Conditional керек. Русский: real future result requires First Conditional."
+},
+{
+q:"Choose the correct option: If I ______ more time, I would join the environmental campaign.",
+a:"had",
+options:["have","had","will have","had had"],
+e:"Қазақша: гипотетикалық қазіргі жағдай — Second Conditional. Русский: hypothetical present situation uses Past Simple after if."
+},
+{
+q:"Choose the correct option: If they had warned people earlier, fewer lives ______ lost.",
+a:"would have been",
+options:["will be","would be","would have been","had been"],
+e:"Қазақша: өткендегі болмаған шарт және өткендегі нәтиже — Third Conditional. Русский: unreal past condition requires would have + past participle."
+},
+{
+q:"Choose the correct option: If I hadn’t missed the train, I ______ at the conference now.",
+a:"would be",
+options:["will be","would be","would have been","am"],
+e:"Қазақша: өткен шарт + қазіргі нәтиже, бұл Mixed Conditional. Русский: past condition with present result is a mixed conditional."
+},
+{
+q:"Choose the correct option: ______ I known about the problem, I would have helped.",
+a:"Had",
+options:["If","Had","Should","Were"],
+e:"Қазақша: формалды inversion: Had I known = If I had known. Русский: inverted third conditional starts with Had."
+},
+{
+q:"Choose the correct option: ______ you need any assistance, please contact reception.",
+a:"Should",
+options:["Had","Should","Were","Would"],
+e:"Қазақша: formal first conditional inversion: Should you need... Русский: Should you need means If you need."
+},
+{
+q:"Choose the correct option: You can borrow my notes ______ you return them tomorrow.",
+a:"provided that",
+options:["unless","provided that","otherwise","but for"],
+e:"Қазақша: provided that — тек сол шарт орындалса. Русский: provided that means only if."
+},
+{
+q:"Choose the correct option: Take an umbrella ______ it rains later.",
+a:"in case",
+options:["unless","in case","otherwise","but for"],
+e:"Қазақша: in case — бір нәрсе болуы мүмкін болғандықтан алдын ала әрекет жасау. Русский: in case means because something may happen."
+},
+{
+q:"Choose the correct option: ______ the weather improves, we’ll cancel the trip.",
+a:"Unless",
+options:["Unless","If not","Provided","In case"],
+e:"Қазақша: unless = if not. Русский: Unless the weather improves = If the weather does not improve."
+}
+]
+},
+{
+id:"unit12",
+title:"Unit 12 — Vocabulary: Chance and nature",
+type:"Vocabulary",
+desc:"Topic vocabulary, phrasal verbs, collocations, idioms and word formation connected with chance, luck, nature, disasters and the environment.",
+kazakh:`
+<h3>Қазақша түсіндіру</h3>
+
+<p><b>Chance and nature</b> unit-ы кездейсоқтық, сәттілік, қауіп, табиғат, экология, табиғи апаттар және қоршаған ортаға қатысты сөздерді қамтиды.</p>
+
+<ul>
+<li><b>Chance vocabulary</b> — approximate, assign, attribute, coincidence, curse, deliberate, determine, fate, fluctuate, foresee, gamble, hazard, likelihood, mishap, odds, random, speculate, superstition, uncertain сияқты сөздер мүмкіндік, болжам, кездейсоқтық және қауіп мағынасын береді.</li>
+<li><b>Nature vocabulary</b> — agriculture, catastrophe, crop, drought, evacuate, exploit, famine, flood, fossil fuels, global warming, habitat, harvest, hurricane, instinct, natural disaster, resource, scarce, species сияқты сөздер табиғат пен экология тақырыбында қолданылады.</li>
+<li><b>Phrasal verbs</b> — chance upon, come across, cool down, cut back on, die out, dig up, dry up, get through, heat up, kill off, put down to, slip up, spring up, store up, throw out, throw up.</li>
+<li><b>Collocations</b> — take a chance, by chance, leave to chance, the odds of doing, risk doing, run the risk of, natural causes, under threat, weather forecast, strong wind сияқты тіркестерді дайын түрде жаттау керек.</li>
+<li><b>Idioms</b> — an act of God, come rain or shine, down on your luck, draw the short straw, have green fingers, let nature take its course, no rhyme or reason, out of the blue, touch wood.</li>
+<li><b>Word formation</b> — assess → assessment, conserve → conservation, ecology → ecological, extinct → extinction, probable → probability, risk → risky, threat → threaten/threatening, wild → wildlife/wilderness.</li>
+</ul>
+`,
+russian:`
+<h3>Русское объяснение</h3>
+
+<p><b>Chance and nature</b> — это vocabulary unit про случайность, удачу, риск, природу, экологию, стихийные бедствия и окружающую среду.</p>
+
+<ul>
+<li><b>Chance vocabulary</b>: approximate, assign, attribute, coincidence, curse, deliberate, determine, fate, fluctuate, foresee, gamble, hazard, likelihood, mishap, odds, random, speculate, superstition, uncertain — слова про вероятность, случайность и риск.</li>
+<li><b>Nature vocabulary</b>: agriculture, catastrophe, crop, drought, evacuate, exploit, famine, flood, fossil fuels, global warming, habitat, harvest, hurricane, instinct, natural disaster, resource, scarce, species.</li>
+<li><b>Phrasal verbs</b>: chance upon, come across, cool down, cut back on, die out, dig up, dry up, get through, heat up, kill off, put down to, slip up, spring up, store up, throw out, throw up.</li>
+<li><b>Collocations</b>: take a chance, by chance, leave to chance, the odds of doing, risk doing, run the risk of, natural causes, under threat, weather forecast, strong wind.</li>
+<li><b>Idioms</b>: an act of God, come rain or shine, down on your luck, draw the short straw, have green fingers, let nature take its course, no rhyme or reason, out of the blue, touch wood.</li>
+<li><b>Word formation</b>: assess → assessment, conserve → conservation, ecology → ecological, extinct → extinction, probable → probability, risk → risky, threat → threaten/threatening.</li>
+</ul>
+`,
+keys:[
+"coincidence: something happening by chance",
+"fate: power believed to control events",
+"foresee: predict before it happens",
+"odds: probability or chances",
+"random: without pattern or plan",
+"superstition: belief not based on reason",
+"drought / famine / flood / hurricane: natural problems",
+"global warming: rise in Earth’s temperature",
+"habitat: natural home of a plant or animal",
+"species: group of living organisms"
+],
+vocab:[
+["approximate","шамамен, жуық","приблизительный; приблизительно оценивать"],
+["assign","тағайындау, бөліп беру","назначать, распределять"],
+["attribute","бір нәрсені себепке жатқызу","приписывать, относить к причине"],
+["coincidence","кездейсоқ сәйкестік","совпадение"],
+["curse","қарғыс","проклятие"],
+["deliberate","әдейі жасалған","намеренный"],
+["determine","анықтау","определять"],
+["fate","тағдыр","судьба"],
+["fluctuate","өзгеріп тұру","колебаться"],
+["foresee","алдын ала болжау","предвидеть"],
+["gamble","тәуекел ету; құмар ойын ойнау","рисковать; играть на деньги"],
+["haphazard","жүйесіз, кездейсоқ","беспорядочный, случайный"],
+["hazard","қауіп","опасность, риск"],
+["likelihood","ықтималдық","вероятность"],
+["mishap","сәтсіз жағдай, кіші апат","неудача, неприятность"],
+["odds","мүмкіндік, ықтималдық","шансы, вероятность"],
+["random","кездейсоқ","случайный"],
+["speculate","болжам жасау","строить предположения"],
+["spontaneous","өздігінен, аяқ астынан","спонтанный"],
+["superstition","ырым, наным","суеверие"],
+["uncertain","анық емес, белгісіз","неопределённый"],
+["agriculture","ауыл шаруашылығы","сельское хозяйство"],
+["catastrophe","апат, қасірет","катастрофа"],
+["crop","егін, өнім","урожай, сельхозкультура"],
+["drought","құрғақшылық","засуха"],
+["evacuate","эвакуациялау","эвакуировать"],
+["exploit","пайдалану, игеру","эксплуатировать, использовать"],
+["famine","ашаршылық","голод"],
+["flood","су тасқыны","наводнение"],
+["fossil fuels","қазба отындары","ископаемое топливо"],
+["global warming","жаһандық жылыну","глобальное потепление"],
+["habitat","табиғи мекен","среда обитания"],
+["harvest","егін жинау; өнім","собирать урожай; урожай"],
+["hurricane","дауыл, ураган","ураган"],
+["instinct","түйсік, инстинкт","инстинкт"],
+["natural disaster","табиғи апат","стихийное бедствие"],
+["resource","ресурс, қор","ресурс"],
+["scarce","тапшы, аз","дефицитный, редкий"],
+["species","түр","вид"],
+["chance upon","кездейсоқ кездестіру","случайно наткнуться"],
+["come across","кездестіру, тауып алу","наткнуться, встретить"],
+["cut back on","азайту","сократить"],
+["die out","жойылып кету","вымирать"],
+["dry up","құрғап қалу","высыхать"],
+["heat up","қызу, ыстық болу","нагреваться"],
+["kill off","жойып жіберу","уничтожить"],
+["put down to","себеп ретінде қарастыру","объяснять чем-либо"],
+["slip up","қате жіберу","ошибиться"],
+["out of the blue","күтпеген жерден","совершенно неожиданно"]
+],
+questions:[
+{
+q:"Choose the correct option: Nobody could have predicted the accident; it was just a ______.",
+a:"mishap",
+options:["mishap","resource","harvest","species"],
+e:"Қазақша: mishap — күтпеген сәтсіз жағдай. Русский: mishap means an unlucky accident or minor disaster."
+},
+{
+q:"Choose the correct option: The number of visitors tends to ______ from month to month.",
+a:"fluctuate",
+options:["fluctuate","foresee","assign","evacuate"],
+e:"Қазақша: fluctuate — жоғары-төмен өзгеріп тұру. Русский: fluctuate means change repeatedly."
+},
+{
+q:"Choose the correct option: Scientists can only ______ about the exact cause of the disaster.",
+a:"speculate",
+options:["speculate","harvest","exploit","migrate"],
+e:"Қазақша: speculate — нақты дәлелсіз болжам жасау. Русский: speculate means make guesses without complete evidence."
+},
+{
+q:"Choose the correct option: Many people believe that walking under a ladder brings bad luck. This is a ______.",
+a:"superstition",
+options:["superstition","coincidence","statistic","habitat"],
+e:"Қазақша: superstition — ырым, ғылыми дәлелсіз сенім. Русский: superstition is a belief not based on reason or science."
+},
+{
+q:"Choose the correct option: Several villages had to be ______ before the hurricane arrived.",
+a:"evacuated",
+options:["evacuated","harvested","exploited","attributed"],
+e:"Қазақша: қауіпті аймақтан адамдарды шығару — evacuate. Русский: evacuate means move people away from danger."
+},
+{
+q:"Choose the correct option: The panda’s natural ______ is under threat.",
+a:"habitat",
+options:["habitat","crop","famine","curse"],
+e:"Қазақша: habitat — жануардың табиғи мекені. Русский: habitat is the natural home of a plant or animal."
+},
+{
+q:"Choose the correct option: The government must cut ______ on fossil fuels.",
+a:"back",
+options:["back","up","off","out"],
+e:"Қазақша: cut back on — азайту. Русский: correct phrasal verb is cut back on."
+},
+{
+q:"Choose the correct option: Some species may die ______ if their habitat is destroyed.",
+a:"out",
+options:["out","up","off","through"],
+e:"Қазақша: die out — жойылып кету. Русский: die out means become extinct."
+},
+{
+q:"Choose the correct option: The sudden storm came out of the ______.",
+a:"blue",
+options:["blue","green","rain","luck"],
+e:"Қазақша: out of the blue — аяқ астынан, күтпеген жерден. Русский: out of the blue means unexpectedly."
+},
+{
+q:"Choose the correct option: The ______ of winning the lottery are extremely low.",
+a:"odds",
+options:["odds","crops","resources","instincts"],
+e:"Қазақша: odds — ықтималдық, мүмкіндік. Русский: odds means chances or probability."
+}
+]
+},
+  {
+id:"unit13",
+title:"Unit 13 — Grammar: Unreal time",
+type:"Grammar",
+desc:"Unreal past, hypothetical meaning, wish, if only, as if/as though, would rather/sooner, it’s time, polite questions and requests.",
+kazakh:`
+<h3>Қазақша түсіндіру</h3>
+
+<p><b>Unreal time</b> — ағылшын тілінде past forms әрқашан өткен шақты білдірмейді. Кейде Past Simple, Past Continuous, Past Perfect қазіргі, болашақ немесе өткенге қатысты <b>шын емес, гипотетикалық, қалаулы</b> жағдайды білдіреді.</p>
+
+<ul>
+<li><b>Past Simple / Past Continuous</b> — қазіргі немесе болашақтағы шын емес/гипотетикалық жағдай үшін қолданылады: <i>I wish I had more time</i>.</li>
+<li><b>Past Perfect</b> — өткенде болмаған гипотетикалық жағдай үшін қолданылады: <i>If only I had studied harder</i>.</li>
+<li><b>Imagine / what if / suppose / supposing</b> — гипотетикалық жағдайды елестету үшін қолданылады.</li>
+<li><b>as if / as though</b> — бір нәрсе шын сияқты көрінгенде, бірақ шын емес болуы мүмкін кезде қолданылады: <i>He acts as if he knew everything</i>.</li>
+<li><b>Polite questions and requests</b> — сұрақты сыпайы ету үшін past tense қолданылады: <i>I was wondering if...</i></li>
+<li><b>It’s time / It’s high time / It’s about time</b> кейін Past Simple келеді, бірақ мағынасы қазіргі/жақын болашақ: <i>It’s time you stopped</i>.</li>
+<li><b>would rather / would sooner</b> — preference білдіреді. Егер басқа адам туралы айтсақ, Past Simple қолданылады: <i>I’d rather you didn’t tell anyone</i>.</li>
+<li><b>wish / if only</b> — өкініш, қалау, жағдайдың басқа болғанын тілеу үшін қолданылады.</li>
+</ul>
+`,
+russian:`
+<h3>Русское объяснение</h3>
+
+<p><b>Unreal time</b> означает, что формы прошедшего времени могут описывать не прошлое, а нереальную, гипотетическую или желаемую ситуацию.</p>
+
+<ul>
+<li><b>Past Simple / Past Continuous</b> используются для нереальной ситуации в настоящем или будущем: <i>I wish I had more money</i>.</li>
+<li><b>Past Perfect</b> используется для нереальной ситуации в прошлом: <i>If only I had known</i>.</li>
+<li><b>Imagine / what if / suppose / supposing</b> вводят гипотетические ситуации.</li>
+<li><b>as if / as though</b> используются для сравнения с ситуацией, которая может быть нереальной: <i>She talks as if she knew everything</i>.</li>
+<li><b>Polite questions and requests</b>: past tense делает вопрос мягче и вежливее: <i>I was wondering whether...</i></li>
+<li><b>It’s time / high time / about time</b> + Past Simple означает, что что-то нужно сделать сейчас: <i>It’s time we left</i>.</li>
+<li><b>would rather / would sooner</b> выражают предпочтение. Если речь о действии другого человека, используется Past Simple.</li>
+<li><b>wish / if only</b> выражают желание, сожаление или недовольство ситуацией.</li>
+</ul>
+`,
+keys:[
+"Unreal time: past form, present/future meaning",
+"Past Perfect: unreal past",
+"wish / if only + Past Simple: present regret",
+"wish / if only + Past Perfect: past regret",
+"wish + would: complaint or desired change",
+"as if / as though + past: unreal comparison",
+"It’s time + Past Simple",
+"would rather + person + Past Simple",
+"I was wondering... = polite request",
+"If I were you... is the standard formal phrase"
+],
+questions:[
+{
+q:"Choose the correct option: I wish I ______ more free time.",
+a:"had",
+options:["have","had","will have","would have"],
+e:"Қазақша: қазіргі жағдайға өкініш — wish + Past Simple. Русский: present regret after wish uses Past Simple."
+},
+{
+q:"Choose the correct option: If only I ______ harder before the exam.",
+a:"had studied",
+options:["studied","had studied","would study","study"],
+e:"Қазақша: өткенге өкініш — if only + Past Perfect. Русский: regret about the past requires Past Perfect."
+},
+{
+q:"Choose the correct option: He talks as if he ______ everything.",
+a:"knew",
+options:["knows","knew","had known","will know"],
+e:"Қазақша: шын емес салыстыру — as if + Past Simple. Русский: unreal comparison uses Past Simple."
+},
+{
+q:"Choose the correct option: She looked as though she ______ bad news.",
+a:"had received",
+options:["receives","received","had received","would receive"],
+e:"Қазақша: өткенге қатысты салыстыру — as though + Past Perfect. Русский: past unreal comparison uses Past Perfect."
+},
+{
+q:"Choose the correct option: It’s high time you ______ smoking.",
+a:"stopped",
+options:["stop","stopped","had stopped","will stop"],
+e:"Қазақша: It’s high time кейін Past Simple келеді, мағынасы — қазір тоқтату керек. Русский: after It’s high time, use Past Simple."
+},
+{
+q:"Choose the correct option: I’d rather you ______ anyone about this.",
+a:"didn’t tell",
+options:["don’t tell","didn’t tell","haven’t told","won’t tell"],
+e:"Қазақша: would rather + басқа адам + Past Simple. Русский: would rather + subject + Past Simple."
+},
+{
+q:"Choose the correct option: Would you rather I ______ later?",
+a:"came back",
+options:["come back","came back","had come back","will come back"],
+e:"Қазақша: басқа адамның әрекеті туралы preference — Past Simple. Русский: for another person’s action after would rather, use Past Simple."
+},
+{
+q:"Choose the correct option: I was wondering if you ______ help me with this form.",
+a:"could",
+options:["can","could","will","must"],
+e:"Қазақша: сыпайы өтініште could қолданылады. Русский: could makes the request more polite."
+},
+{
+q:"Choose the correct option: Suppose you ______ a million euros, what would you do?",
+a:"won",
+options:["win","won","had won","will win"],
+e:"Қазақша: гипотетикалық қазіргі/болашақ жағдай — suppose + Past Simple. Русский: hypothetical present/future situation uses Past Simple."
+},
+{
+q:"Choose the correct option: I wish they ______ so much noise downstairs.",
+a:"wouldn’t make",
+options:["don’t make","wouldn’t make","hadn’t made","didn’t made"],
+e:"Қазақша: wish + would — басқа адамның әрекетіне шағым/өзгеріс тілеу. Русский: wish + would is used for complaints about someone’s behaviour."
+}
+]
+},
+{
+id:"unit14",
+title:"Unit 14 — Vocabulary: Quantity and money",
+type:"Vocabulary",
+desc:"Topic vocabulary, phrasal verbs, collocations, idioms and word formation connected with quantity, amount, size, finance and money.",
+kazakh:`
+<h3>Қазақша түсіндіру</h3>
+
+<p><b>Quantity and money</b> unit-ы сан, мөлшер, көлем, пропорция, ақша, қаржы, қарыз, сақтандыру және инвестиция тақырыптарына қатысты vocabulary береді.</p>
+
+<ul>
+<li><b>Quantity vocabulary</b> — abundant, ample, area, average, batch, bulk, considerable, countless, dimension, diminish, equation, equidistant, expand, extent, finite, fraction, heap, imbalance, immense, intensity, magnitude, major, minor, proportion, shrink, sufficient, vast, volume сияқты сөздер мөлшер мен көлемді сипаттайды.</li>
+<li><b>Money vocabulary</b> — benefit, compensation, damages, debt, deduct, deposit, direct debit, dividend, down payment, finance, insurance, interest, investment, lump sum, mortgage, overdraft, pension, share, speculate, withdraw.</li>
+<li><b>Phrasal verbs</b> — add up to, break down, build up, buy off, buy out, carry over, clock up, club together, drum up, mount up, pay back, pay out, size up, take away, weigh down.</li>
+<li><b>Collocations</b> — make it big, big business, deal with, in depth, pay dearly, pay your way, run short of, share in/with, large-scale, hidden depths, high risk.</li>
+<li><b>Idioms</b> — a drop in the ocean, break even, fall short, fifty-fifty, go halves, keep up with the Joneses, line your pockets, lock, stock and barrel, tidy sum.</li>
+<li><b>Word formation</b> — add → addition/additional, benefit → beneficial, consider → considerable, extend → extension, finite → infinite, high → height, large → enlarge, long → length, magnify → magnificent, pay → repayment/payment.</li>
+</ul>
+`,
+russian:`
+<h3>Русское объяснение</h3>
+
+<p><b>Quantity and money</b> — это vocabulary unit про количество, объём, размер, пропорции, деньги, финансы, долги, выплаты и инвестиции.</p>
+
+<ul>
+<li><b>Quantity vocabulary</b>: abundant, ample, average, batch, bulk, considerable, countless, dimension, diminish, expand, extent, finite, fraction, heap, imbalance, immense, magnitude, proportion, shrink, sufficient, vast, volume.</li>
+<li><b>Money vocabulary</b>: benefit, compensation, damages, debt, deduct, deposit, direct debit, dividend, down payment, finance, insurance, interest, investment, lump sum, mortgage, overdraft, pension, share, speculate, withdraw.</li>
+<li><b>Phrasal verbs</b>: add up to, break down, build up, buy off, buy out, carry over, clock up, club together, drum up, mount up, pay back, pay out, size up, take away, weigh down.</li>
+<li><b>Collocations</b>: make it big, deal with, in depth, pay dearly, pay your way, run short of, high risk, large-scale, hidden depths.</li>
+<li><b>Idioms</b>: a drop in the ocean, break even, fall short, fifty-fifty, go halves, keep up with the Joneses, line your pockets, lock, stock and barrel, tidy sum.</li>
+<li><b>Word formation</b>: add → addition, benefit → beneficial, consider → considerable, extend → extension, finite → infinite, high → height, large → enlarge, pay → repayment.</li>
+</ul>
+`,
+keys:[
+"abundant / ample: more than enough",
+"finite / infinite: limited / unlimited",
+"fraction / ratio / proportion: mathematical quantity words",
+"shrink / diminish / reduce: become or make smaller",
+"deposit / withdraw: put money in / take money out",
+"debt / overdraft / mortgage: money owed",
+"interest / dividend / investment: finance words",
+"add up to: total",
+"pay back: return borrowed money",
+"break even: neither profit nor loss"
+],
+vocab:[
+["abundant","мол, көп","обильный, многочисленный"],
+["ample","жеткілікті, мол","достаточный, обильный"],
+["area","аймақ; аудан","область; площадь"],
+["average","орташа көрсеткіш","средний показатель"],
+["batch","топтама, партия","партия, серия"],
+["bulk","негізгі бөлік, көлем","основная масса, объём"],
+["considerable","едәуір, айтарлықтай","значительный"],
+["countless","сансыз көп","бесчисленный"],
+["dimension","өлшем","измерение"],
+["diminish","азаю, азайту","уменьшать(ся)"],
+["equation","теңдеу","уравнение"],
+["equidistant","бірдей қашықтықтағы","равноудалённый"],
+["expand","кеңею, кеңейту","расширять(ся)"],
+["extent","дәреже, көлем","степень, масштаб"],
+["finite","шектеулі","конечный, ограниченный"],
+["fraction","бөлшек","дробь"],
+["heap","үйінді, көп мөлшер","куча"],
+["imbalance","теңсіздік, үйлесімсіздік","дисбаланс"],
+["immense","өте үлкен","огромный"],
+["intensity","қарқындылық","интенсивность"],
+["magnitude","шама, көлем","величина, масштаб"],
+["major","негізгі, үлкен","главный, крупный"],
+["minor","кіші, болмашы","незначительный"],
+["proportion","пропорция, үлес","пропорция, доля"],
+["shrink","кішірею, тарылу","сжиматься, уменьшаться"],
+["sufficient","жеткілікті","достаточный"],
+["vast","орасан зор","огромный"],
+["volume","көлем","объём"],
+["benefit","пайда, жәрдемақы","выгода, пособие"],
+["compensation","өтемақы","компенсация"],
+["damages","сот арқылы төленетін өтемақы","компенсация ущерба"],
+["debt","қарыз","долг"],
+["deduct","ұстап қалу, шегеру","вычитать, удерживать"],
+["deposit","салым; ақша салу","вклад; вносить деньги"],
+["direct debit","автоматты төлем","автоматическое списание"],
+["dividend","дивиденд","дивиденд"],
+["down payment","алғашқы жарна","первоначальный взнос"],
+["finance","қаржыландыру","финансировать"],
+["insurance","сақтандыру","страхование"],
+["interest","пайыз","процент"],
+["investment","инвестиция","инвестиция"],
+["lump sum","бір реттік ірі төлем","единовременная сумма"],
+["mortgage","ипотека","ипотека"],
+["overdraft","банктік овердрафт","овердрафт"],
+["pension","зейнетақы","пенсия"],
+["share","акция; үлес","акция; доля"],
+["withdraw","ақша шешу","снимать деньги"]
+],
+questions:[
+{
+q:"Choose the correct option: Thankfully, she only suffered ______ injuries in the accident.",
+a:"minor",
+options:["minor","major","immense","vast"],
+e:"Қазақша: minor injuries — жеңіл жарақаттар. Русский: minor injuries means not serious injuries."
+},
+{
+q:"Choose the correct option: A half, written as 1/2, is a ______.",
+a:"fraction",
+options:["fraction","ratio","equation","dimension"],
+e:"Қазақша: 1/2 — бөлшек. Русский: 1/2 is a fraction."
+},
+{
+q:"Choose the correct option: The population of the city continues to ______ every year.",
+a:"expand",
+options:["expand","shrink","deduct","withdraw"],
+e:"Қазақша: expand — кеңею/өсу. Русский: expand means become larger."
+},
+{
+q:"Choose the correct option: Hot water may make this sweater ______.",
+a:"shrink",
+options:["shrink","expand","mount","speculate"],
+e:"Қазақша: shrink — кішірею, тарылу. Русский: shrink means become smaller."
+},
+{
+q:"Choose the correct option: I’d like to ______ 500 euros from my account.",
+a:"withdraw",
+options:["withdraw","deduct","deposit","finance"],
+e:"Қазақша: withdraw — шоттан ақша шешу. Русский: withdraw means take money out of an account."
+},
+{
+q:"Choose the correct option: If you buy a house, you may need to get a ______.",
+a:"mortgage",
+options:["mortgage","dividend","pension","share"],
+e:"Қазақша: mortgage — үй алуға арналған ипотекалық несие. Русский: mortgage is a loan for buying property."
+},
+{
+q:"Choose the correct option: Different bank accounts pay different amounts of ______.",
+a:"interest",
+options:["interest","damages","debt","insurance"],
+e:"Қазақша: bank account pays interest — банк пайыз төлейді. Русский: bank accounts can pay interest."
+},
+{
+q:"Choose the correct option: We all clubbed ______ to buy her a birthday present.",
+a:"together",
+options:["together","up","off","over"],
+e:"Қазақша: club together — ортақ ақша жинау. Русский: club together means collect money as a group."
+},
+{
+q:"Choose the correct option: The costs soon mounted ______.",
+a:"up",
+options:["up","off","out","away"],
+e:"Қазақша: mount up — көбейіп кету. Русский: mount up means increase or accumulate."
+},
+{
+q:"Choose the correct option: The charity donation was only a drop in the ______ compared with what was needed.",
+a:"ocean",
+options:["ocean","bank","market","heap"],
+e:"Қазақша: a drop in the ocean — өте аз, жеткіліксіз. Русский: a drop in the ocean means a very small amount compared with what is needed."
+}
+]
+},
+  {
+id:"unit15",
+title:"Unit 15 — Grammar: Adjectives and adverbs",
+type:"Grammar",
+desc:"Position of adjectives, order of multiple adjectives, adjectives used as nouns, position of adverbs, comparisons, gradable and ungradable adjectives, and confusing adverb/adjective forms.",
+kazakh:`
+<h3>Қазақша түсіндіру</h3>
+
+<p><b>Adjectives and adverbs</b> — сын есім мен үстеудің сөйлемдегі орны, салыстыру формалары және шатастыратын формалар туралы unit.</p>
+
+<ul>
+<li><b>Adjectives</b> әдетте зат есімнің алдында келеді: <i>a new house</i>. Бірақ appear, be, become, feel, get, look, seem, smell, sound, taste, turn сияқты verbs-тен кейін де келеді: <i>It feels rough</i>.</li>
+<li>Бірнеше adjective бір noun алдында келсе, әдетте реті: <b>opinion → size → shape → age → colour → origin → material → purpose</b>.</li>
+<li>Кейбір adjectives noun сияқты қолданылады: <i>the poor, the injured, the French</i>.</li>
+<li><b>Adverbs</b> сөйлем басында, соңында немесе verb-пен бірге келуі мүмкін. Frequency adverbs көбіне auxiliary мен main verb арасында немесе be-ден кейін келеді.</li>
+<li><b>Comparative</b> екі нәрсені салыстырады: <i>bigger, more comfortable</i>. <b>Superlative</b> топ ішіндегі ең жоғары/төмен деңгейді көрсетеді: <i>the best, the least expensive</i>.</li>
+<li><b>Modifiers</b>: much, far, a lot, slightly, considerably comparative алдында қолданылады: <i>much better, slightly cheaper</i>.</li>
+<li><b>as ... as</b>, <b>not nearly as ... as</b>, <b>nothing like as ... as</b>, <b>the ..., the ...</b> салыстыру құрылымдары.</li>
+<li><b>Gradable adjectives</b>: tired, cold, interesting сияқты дәрежесі өзгеретін adjectives. <b>Ungradable adjectives</b>: perfect, impossible, exhausted, dead сияқты extreme мағына береді.</li>
+<li>Confusing cases: <i>hard/hardly, late/lately, near/nearly, high/highly, fast, well</i> мағынасына қарай әртүрлі қолданылады.</li>
+</ul>
+`,
+russian:`
+<h3>Русское объяснение</h3>
+
+<p><b>Adjectives and adverbs</b> — это тема про положение прилагательных и наречий, порядок нескольких прилагательных, сравнения и формы, которые легко перепутать.</p>
+
+<ul>
+<li><b>Adjectives</b> обычно стоят перед существительным: <i>a new house</i>, но после linking verbs тоже используются: <i>look tired, feel rough, sound strange</i>.</li>
+<li>Если перед существительным несколько прилагательных, порядок обычно такой: <b>opinion → size → shape → age → colour → origin → material → purpose</b>.</li>
+<li>Некоторые adjectives могут использоваться как nouns: <i>the poor, the injured, the French</i>.</li>
+<li><b>Adverbs</b> могут стоять в начале, конце предложения или рядом с глаголом. Наречия частотности обычно стоят после be или между auxiliary и main verb.</li>
+<li><b>Comparative</b> сравнивает две вещи: <i>bigger, more expensive</i>. <b>Superlative</b> выделяет один элемент из группы: <i>the best, the least useful</i>.</li>
+<li><b>Modifiers</b> с comparative: much, far, a lot, slightly, considerably, a bit.</li>
+<li>Структуры сравнения: <i>as ... as, not nearly as ... as, nowhere near as ... as, the ..., the ...</i>.</li>
+<li><b>Gradable adjectives</b> можно усиливать very/quite/a bit. <b>Ungradable adjectives</b> усиливаются absolutely/completely/totally.</li>
+<li>Сложные пары: <i>hard/hardly, late/lately, near/nearly, high/highly, short/shortly, wide/widely</i>.</li>
+</ul>
+`,
+keys:[
+"Adjective before noun: a new house",
+"Linking verbs + adjective: feel rough, look tired",
+"Adjective order: opinion, size, shape, age, colour, origin, material, purpose",
+"Adjectives as nouns: the poor, the injured, the French",
+"Frequency adverbs: often, always, rarely",
+"Comparative: bigger, more comfortable",
+"Superlative: the best, the least expensive",
+"Modifiers: much, far, slightly, considerably",
+"Ungradable adjectives: absolutely exhausted, completely impossible",
+"Confusing forms: hard/hardly, late/lately, high/highly"
+],
+questions:[
+{
+q:"Choose the correct option: The soup tastes ______.",
+a:"delicious",
+options:["delicious","deliciously","delightfully","tastefully"],
+e:"Қазақша: taste linking verb ретінде adjective алады. Русский: after linking verb taste, use adjective, not adverb."
+},
+{
+q:"Choose the correct option: She looked ______ at the man behind the counter.",
+a:"angrily",
+options:["angry","angrily","anger","angrier"],
+e:"Қазақша: looked бұл жерде action verb, сондықтан adverb керек. Русский: when look means direct your eyes, use adverb."
+},
+{
+q:"Choose the correct option: We bought a ______ table.",
+a:"large oak dining",
+options:["dining oak large","large oak dining","oak large dining","large dining oak"],
+e:"Қазақша: adjective order: size + material + purpose. Русский: correct order is size + material + purpose."
+},
+{
+q:"Choose the correct option: The government should help ______.",
+a:"the poor",
+options:["poor","the poor","the poors","poor people the"],
+e:"Қазақша: the + adjective жалпы әлеуметтік топты білдіреді. Русский: the poor means poor people as a group."
+},
+{
+q:"Choose the correct option: This flat is much ______ than ours.",
+a:"bigger",
+options:["big","bigger","biggest","more big"],
+e:"Қазақша: than болса comparative керек. Русский: than requires comparative form."
+},
+{
+q:"Choose the correct option: Mexico City is probably ______ city I’ve ever visited.",
+a:"the largest",
+options:["largest","the largest","larger","the larger"],
+e:"Қазақша: топ ішіндегі ең үлкен — superlative + the. Русский: superlative normally takes the."
+},
+{
+q:"Choose the correct option: Iron is not nearly as hard ______ diamond.",
+a:"as",
+options:["as","than","like","to"],
+e:"Қазақша: as ... as құрылымы. Русский: correct comparative structure is as ... as."
+},
+{
+q:"Choose the correct option: Tim was ______ exhausted after working all day.",
+a:"absolutely",
+options:["very","a bit","absolutely","slightly"],
+e:"Қазақша: exhausted — ungradable/extreme adjective, absolutely дұрыс. Русский: ungradable adjectives take absolutely/completely, not very in this meaning."
+},
+{
+q:"Choose the correct option: I could ______ hear the music.",
+a:"hardly",
+options:["hard","hardly","harder","hardest"],
+e:"Қазақша: hardly — әрең, almost not. Русский: hardly means almost not."
+},
+{
+q:"Choose the correct option: The scientist is ______ respected in her field.",
+a:"highly",
+options:["high","highly","height","higher"],
+e:"Қазақша: highly respected — өте құрметтелетін деген тұрақты қолданыс. Русский: highly is used with respected/likely/unusual etc."
+}
+]
+},
+{
+id:"unit16",
+title:"Unit 16 — Vocabulary: Materials and the built environment",
+type:"Vocabulary",
+desc:"Topic vocabulary, phrasal verbs, collocations, idioms and word formation connected with materials, buildings, cities and the built environment.",
+kazakh:`
+<h3>Қазақша түсіндіру</h3>
+
+<p><b>Materials and the built environment</b> unit-ы материалдар, физикалық қасиеттер, ғимараттар, қала, инфрақұрылым және urban environment тақырыптарына қатысты vocabulary береді.</p>
+
+<ul>
+<li><b>Materials vocabulary</b> — block, brittle, chip, compact, concentrate, crack, crumb, crush, dense, dilute, dissolve, fabric, firm, fragile, friction, grain, gravity, hollow, liquid, mineral, opaque, solid, substance, synthetic, texture, transparent сияқты сөздер материалдың қасиетін сипаттайды.</li>
+<li><b>Built environment vocabulary</b> — built-up, bypass, construct, demolish, district, dwell, estate, evict, high-rise, housing, infrastructure, inner city, occupy, populated, skyline, skyscraper, structure, suburban, surroundings, urban.</li>
+<li><b>Phrasal verbs</b> — board up, close up, come out, cut out, fix up, tear down, pile up, prop up, put in, put together, put up, set up, spread out, take down, water down, wear down.</li>
+<li><b>Collocations</b> — brick wall, erect a monument, ground floor, lay the foundations, raw materials, smooth sailing, on the table, under the surface, town centre, window shopping.</li>
+<li><b>Idioms</b> — a home from home, blot on the landscape, concrete jungle, home sweet home, in the sticks, make yourself at home, on the street, on the town, satellite town.</li>
+<li><b>Word formation</b> — analyse → analysis/analyst, architect → architecture, dense → density, house → housing/household, inhabit → habitat/inhabitable, repair → repairable/irreparable, reside → resident/residence, solid → solidity, structure → infrastructure.</li>
+</ul>
+`,
+russian:`
+<h3>Русское объяснение</h3>
+
+<p><b>Materials and the built environment</b> — это vocabulary unit про материалы, свойства веществ, здания, городскую среду, инфраструктуру и жильё.</p>
+
+<ul>
+<li><b>Materials vocabulary</b>: block, brittle, chip, compact, concentrate, crack, crumb, crush, dense, dilute, dissolve, fabric, firm, fragile, friction, grain, gravity, hollow, liquid, mineral, opaque, solid, substance, synthetic, texture, transparent.</li>
+<li><b>Built environment vocabulary</b>: built-up, bypass, construct, demolish, district, dwell, estate, evict, high-rise, housing, infrastructure, inner city, occupy, populated, skyline, skyscraper, structure, suburban, surroundings, urban.</li>
+<li><b>Phrasal verbs</b>: board up, close up, come out, cut out, fix up, tear down, pile up, prop up, put in, put together, put up, set up, spread out, take down, water down, wear down.</li>
+<li><b>Collocations</b>: brick wall, erect a monument, ground floor, lay the foundations, raw materials, smooth sailing, on the table, beneath the surface, town centre.</li>
+<li><b>Idioms</b>: a home from home, blot on the landscape, concrete jungle, home sweet home, in the sticks, make yourself at home, on the street, on the town, satellite town.</li>
+<li><b>Word formation</b>: analyse → analysis, architect → architecture, dense → density, inhabit → inhabitable, repair → repairable, reside → resident, solid → solidity, structure → infrastructure.</li>
+</ul>
+`,
+keys:[
+"brittle / fragile: easily broken",
+"opaque vs transparent: cannot see through / can see through",
+"solid / liquid / substance: material states and things",
+"friction / gravity: physical forces",
+"construct / demolish: build / destroy",
+"urban / suburban / inner city: city-related words",
+"board up: cover with boards",
+"tear down: demolish",
+"put up: build",
+"blot on the landscape: ugly thing in a place"
+],
+vocab:[
+["block","кесек, блок","блок, кусок"],
+["brittle","сынғыш","хрупкий"],
+["chip","кішкентай сынық","щепка, осколок"],
+["compact","тығыз, ықшам","компактный, плотный"],
+["concentrate","қоюландыру; шоғырландыру","концентрировать"],
+["crack","жарық, жарылу","трещина; трескаться"],
+["crumb","қиқым, үгінді","крошка"],
+["crush","жаншу, езу","раздавить"],
+["dense","тығыз","плотный"],
+["dilute","сұйылту","разбавлять"],
+["dissolve","еріту, еру","растворять(ся)"],
+["fabric","мата","ткань"],
+["firm","қатты, берік","твёрдый, прочный"],
+["fragile","нәзік, сынғыш","хрупкий"],
+["friction","үйкеліс","трение"],
+["grain","дән; түйір","зерно; крупинка"],
+["gravity","ауырлық күші","гравитация"],
+["hollow","іші қуыс","полый"],
+["liquid","сұйықтық; сұйық","жидкость; жидкий"],
+["mineral","минерал","минерал"],
+["opaque","мөлдір емес","непрозрачный"],
+["solid","қатты; қатты зат","твёрдый; твёрдое тело"],
+["substance","зат","вещество"],
+["synthetic","жасанды, синтетикалық","синтетический"],
+["texture","құрылым, фактура","текстура"],
+["transparent","мөлдір","прозрачный"],
+["built-up","құрылысы көп, тығыз салынған","застроенный"],
+["bypass","айналма жол","объездная дорога"],
+["construct","салу, тұрғызу","строить"],
+["demolish","қирату","сносить, разрушать"],
+["district","аудан","район"],
+["dwell","тұру, мекендеу","проживать"],
+["estate","тұрғын үй кешені/аудан","жилой массив"],
+["evict","үйден шығару","выселять"],
+["high-rise","биік ғимарат","высотный"],
+["housing","тұрғын үй","жильё"],
+["infrastructure","инфрақұрылым","инфраструктура"],
+["inner city","қаланың орталық/ескі бөлігі","внутренний район города"],
+["occupy","орын алу; басып алу","занимать"],
+["populated","халық қоныстанған","населённый"],
+["skyline","қала көкжиегі","силуэт города"],
+["skyscraper","зәулім ғимарат","небоскрёб"],
+["structure","құрылым, ғимарат","структура, сооружение"],
+["suburban","қала маңындағы","пригородный"],
+["surroundings","айналасы, орта","окружение"],
+["urban","қалалық","городской"]
+],
+questions:[
+{
+q:"Choose the correct option: Glass is ______, so you can see through it.",
+a:"transparent",
+options:["transparent","opaque","hollow","dense"],
+e:"Қазақша: transparent — мөлдір, ішінен көруге болады. Русский: transparent means you can see through it."
+},
+{
+q:"Choose the correct option: Be careful with that old vase; it’s very ______.",
+a:"fragile",
+options:["fragile","firm","compact","solid"],
+e:"Қазақша: fragile — тез сынатын. Русский: fragile means easily broken."
+},
+{
+q:"Choose the correct option: Salt ______ in water.",
+a:"dissolves",
+options:["dissolves","cracks","strokes","stacks"],
+e:"Қазақша: dissolve — суда еру. Русский: dissolve means become mixed into liquid."
+},
+{
+q:"Choose the correct option: The force that stops objects sliding easily is called ______.",
+a:"friction",
+options:["friction","gravity","texture","mineral"],
+e:"Қазақша: friction — үйкеліс күші. Русский: friction is the force between surfaces."
+},
+{
+q:"Choose the correct option: The council plans to ______ the old factory and build flats.",
+a:"demolish",
+options:["demolish","dwell","occupy","surround"],
+e:"Қазақша: demolish — ғимаратты қирату. Русский: demolish means destroy a building."
+},
+{
+q:"Choose the correct option: The city needs better transport ______.",
+a:"infrastructure",
+options:["infrastructure","estate","skyline","district"],
+e:"Қазақша: infrastructure — жол, көлік, байланыс сияқты жүйелер. Русский: infrastructure means basic systems and services."
+},
+{
+q:"Choose the correct option: The police boarded ______ the windows after the building was abandoned.",
+a:"up",
+options:["up","out","down","together"],
+e:"Қазақша: board up — терезені тақтаймен жабу. Русский: board up means cover with wooden boards."
+},
+{
+q:"Choose the correct option: They decided to tear ______ the old wall.",
+a:"down",
+options:["down","up","out","together"],
+e:"Қазақша: tear down — қирату. Русский: tear down means demolish."
+},
+{
+q:"Choose the correct option: That ugly office block is a real blot on the ______.",
+a:"landscape",
+options:["landscape","street","home","belt"],
+e:"Қазақша: blot on the landscape — көріністі бұзатын ұсқынсыз нәрсе. Русский: this idiom means an ugly thing spoiling a place."
+},
+{
+q:"Choose the correct option: After a long journey, there is nothing better than home ______ home.",
+a:"sweet",
+options:["sweet","from","street","town"],
+e:"Қазақша: home sweet home — өз үйіңе оралғанда айтылатын тіркес. Русский: home sweet home means you are happy to be back home."
+}
+]
+},
+  {
+id:"unit17",
+title:"Unit 17 — Grammar: Clauses",
+type:"Grammar",
+desc:"Relative clauses, defining and non-defining relative clauses, participle clauses, infinitive clauses and concession clauses.",
+kazakh:`
+<h3>Қазақша түсіндіру</h3>
+
+<p><b>Clauses</b> — сөйлем ішіндегі қосымша бөліктер. Бұл unit-та relative clauses, participle clauses, infinitive clauses және concession clauses қарастырылады.</p>
+
+<ul>
+<li><b>Relative pronouns</b>: who — адамға; which — зат/ұғымға; whom — формалды object; that — who/which орнына defining clause-та; where — орынға; when — уақытқа; why — себепке; whose — иелікке; what — “the thing(s) which”.</li>
+<li><b>Defining relative clause</b> негізгі ақпарат береді. Оны алып тастасақ, сөйлем толық түсініксіз болуы мүмкін. Мұнда comma қойылмайды және that қолдануға болады.</li>
+<li><b>Non-defining relative clause</b> қосымша ақпарат береді. Comma міндетті түрде қойылады, that қолданылмайды, relative pronoun түсіп қалмайды.</li>
+<li><b>Preposition + relative pronoun</b> формалды стильде қолданылады: <i>the person to whom I spoke</i>. Ауызекі тілде preposition соңында тұра алады: <i>the person who I spoke to</i>.</li>
+<li><b>Participle clauses</b> relative clause-ты қысқартады: <i>the woman standing there</i> = the woman who is standing there.</li>
+<li><b>Perfect participle</b> бұрын болған әрекетті көрсетеді: <i>Having finished the report, she left</i>.</li>
+<li><b>Infinitive clauses</b> сөйлем басында немесе be-ден кейін қолданылуы мүмкін: <i>To become fluent takes time</i>.</li>
+<li><b>Concession clauses</b> — although, though, even though, despite, in spite of, while, whereas, however арқылы қарама-қайшылық білдіреді.</li>
+</ul>
+`,
+russian:`
+<h3>Русское объяснение</h3>
+
+<p><b>Clauses</b> — это придаточные конструкции внутри предложения. В этом unit рассматриваются relative clauses, participle clauses, infinitive clauses и concession clauses.</p>
+
+<ul>
+<li><b>Relative pronouns</b>: who — для людей; which — для вещей и понятий; whom — формальное object; that — более неформальный вариант who/which в defining clauses; where — место; when — время; why — причина; whose — принадлежность; what — “то, что”.</li>
+<li><b>Defining relative clause</b> даёт необходимую информацию. Без неё смысл предложения часто неполный. Запятые не ставятся, можно использовать that.</li>
+<li><b>Non-defining relative clause</b> даёт дополнительную информацию. Она выделяется запятыми, that не используется, relative pronoun нельзя опускать.</li>
+<li><b>Preposition + relative pronoun</b> звучит формально: <i>the consultant with whom I spoke</i>. В менее формальном стиле preposition может стоять в конце.</li>
+<li><b>Participle clauses</b> сокращают relative clauses: <i>the boy taken to hospital</i> = the boy who was taken to hospital.</li>
+<li><b>Having + past participle</b> показывает действие, которое произошло раньше другого действия.</li>
+<li><b>Infinitive clauses</b> могут начинать предложение или идти после be.</li>
+<li><b>Concession clauses</b>: although, though, even though, despite, in spite of, while, whereas, however выражают уступку или контраст.</li>
+</ul>
+`,
+keys:[
+"who: people",
+"which: things and concepts",
+"whose: possession",
+"where / when / why: place, time, reason",
+"Defining relative clause: no commas, that possible",
+"Non-defining relative clause: commas, no that",
+"Participle clause: reduced relative clause",
+"Having done: earlier action",
+"Despite / in spite of + noun or -ing",
+"Although / even though + full clause"
+],
+questions:[
+{
+q:"Choose the correct option: The doctor ______ treated my brother is very experienced.",
+a:"who",
+options:["who","which","where","when"],
+e:"Қазақша: doctor — адам, сондықтан who. Русский: for people as subject in a relative clause, use who."
+},
+{
+q:"Choose the correct option: This is the hospital ______ I was born.",
+a:"where",
+options:["which","where","whose","why"],
+e:"Қазақша: hospital — орын, сондықтан where. Русский: where refers to place."
+},
+{
+q:"Choose the correct option: I’ll never forget the day ______ I broke my arm.",
+a:"when",
+options:["when","where","whose","whom"],
+e:"Қазақша: day уақытты білдіреді, сондықтан when. Русский: when refers to time."
+},
+{
+q:"Choose the correct option: That’s the student ______ parents are doctors.",
+a:"whose",
+options:["who","whose","which","where"],
+e:"Қазақша: parents кімнің? — whose. Русский: whose shows possession."
+},
+{
+q:"Choose the correct option: Dr Lake, ______ has worked here for ten years, is a surgeon.",
+a:"who",
+options:["that","who","which","what"],
+e:"Қазақша: non-defining clause-та that қолданылмайды. Русский: in non-defining relative clauses, use who, not that."
+},
+{
+q:"Choose the correct option: The book ______ you recommended was excellent.",
+a:"that",
+options:["that","where","when","whose"],
+e:"Қазақша: defining clause-та thing үшін that/which болады. Русский: that can be used for things in defining relative clauses."
+},
+{
+q:"Choose the correct option: The woman ______ at the reception desk is my aunt.",
+a:"standing",
+options:["standing","stood","was standing","to stand"],
+e:"Қазақша: standing — participle clause, who is standing дегенді қысқартады. Русский: standing replaces who is standing."
+},
+{
+q:"Choose the correct option: ______ finished the assignment, he went home.",
+a:"Having",
+options:["Having","Have","Had","Has"],
+e:"Қазақша: Having finished — бір әрекет екіншісінен бұрын болды. Русский: Having + past participle shows an earlier action."
+},
+{
+q:"Choose the correct option: ______ the rain, the match continued.",
+a:"Despite",
+options:["Although","Despite","However","Whereas"],
+e:"Қазақша: despite кейін noun келеді: the rain. Русский: despite is followed by a noun or -ing form."
+},
+{
+q:"Choose the correct option: ______ she was tired, she continued working.",
+a:"Although",
+options:["Despite","In spite of","Although","However"],
+e:"Қазақша: although кейін толық сөйлем келеді. Русский: although is followed by a full clause."
+}
+]
+},
+{
+id:"unit18",
+title:"Unit 18 — Vocabulary: Reactions and health",
+type:"Vocabulary",
+desc:"Topic vocabulary, phrasal verbs, collocations, idioms and word formation connected with reactions, emotions, behaviour, illness and medical treatment.",
+kazakh:`
+<h3>Қазақша түсіндіру</h3>
+
+<p><b>Reactions and health</b> unit-ы адамның реакциясы, эмоциясы, мінез-құлқы, ауру, емдеу және медицинаға қатысты vocabulary береді.</p>
+
+<ul>
+<li><b>Reactions vocabulary</b> — acknowledge — мойындау; agonise — қатты уайымдау; apathy — немқұрайлылық; avoid — қашу; chuckle — ақырын күлу; contentment — қанағаттану; dignity — абырой; disgust — жиіркеніш; fed up — жалығу; gloat — біреудің сәтсіздігіне қуану; grimace — бет-аузын тыжырайту; moan — шағымдану; neglect — елемеу; resent — ренжу; smirk — мысқылдап күлу; terror — үрей.</li>
+<li><b>Health vocabulary</b> — administer — дәрі/ем беру; admit — ауруханаға қабылдау; agony — қатты ауырсыну; antidote — уға қарсы дәрі; diagnosis — диагноз; inoculate — вакцина салу; irritation — тітіркену; numb — жансызданған; prescribe — дәрі жазу; prognosis — болжам; sick leave — ауруына байланысты демалыс; side effect — жанама әсер; syringe — шприц; vaccine — вакцина; ward — аурухана бөлімі.</li>
+<li><b>Phrasal verbs</b> — black out — есінен тану; come out in — денеге бөртпе шығу; come round — есін жию; cotton on — түсіне бастау; get over — айығу/жеңу; lash out — ашумен шабуылдау; pass away/on — қайтыс болу; play up — мазалау; pull through — аман қалу; ward off — алдын алу.</li>
+<li><b>Collocations</b> — act in good faith — адал ниетпен әрекет ету; face the consequences — салдарымен бетпе-бет келу; feel guilty — өзін кінәлі сезіну; in good health — денсаулығы жақсы; react to — реакция білдіру; response to — жауап/реакция; treat someone for — біреуді бір аурудан емдеу.</li>
+<li><b>Idioms</b> — cry over spilt milk — өзгермейтін нәрсе үшін босқа өкіну; fly off the handle — себепсіз қатты ашулану; give someone a dose/taste of their own medicine — біреуге өз әдісін қайтару; give sth a miss — әдетте істейтін нәрсені істемеу; grin and bear it — қиындыққа шағымсыз төзу; keep a straight face — күлмей, байсалды қалу; kick yourself — өз қателігіңе ашулану; let off steam — ашуды шығару; let sleeping dogs lie — ескі мәселені қозғамау; up in arms about — қатты наразы болу.</li>
+<li><b>Word formation</b> — act → react/interaction; approve → disapprove/disapproval; content → contentment/discontent; effect → effective/ineffective; illusion → disillusioned; know → acknowledge/knowledgeable; patient → patience/impatient; prevent → prevention/preventive; regret → regrettable; respond → response/responsive.</li>
+</ul>
+`,
+russian:`
+<h3>Русское объяснение</h3>
+
+<p><b>Reactions and health</b> — это vocabulary unit про реакции людей, эмоции, поведение, болезни, лечение и медицинские ситуации.</p>
+
+<ul>
+<li><b>Reactions vocabulary</b>: acknowledge — признавать; agonise — мучительно переживать; apathy — апатия, безразличие; avoid — избегать; chuckle — тихо посмеиваться; contentment — удовлетворённость; dignity — достоинство; disgust — отвращение; fed up — сытый по горло; gloat — злорадствовать; grimace — гримасничать; moan — жаловаться; neglect — пренебрегать; resent — возмущаться/обижаться; smirk — самодовольно ухмыляться; terror — ужас.</li>
+<li><b>Health vocabulary</b>: administer — вводить лекарство; admit — принимать в больницу; agony — сильная боль; antidote — противоядие; diagnosis — диагноз; inoculate — прививать; irritation — раздражение; numb — онемевший; prescribe — выписывать лекарство; prognosis — прогноз; sick leave — больничный; side effect — побочный эффект; syringe — шприц; vaccine — вакцина; ward — больничное отделение.</li>
+<li><b>Phrasal verbs</b>: black out — потерять сознание; come out in — покрыться пятнами/сыпью; come round — прийти в себя; cotton on — начать понимать; get over — оправиться; lash out — наброситься; pass away/on — умереть; play up — беспокоить/капризничать; pull through — выжить после болезни; ward off — предотвращать.</li>
+<li><b>Collocations</b>: act in good faith — действовать добросовестно; face the consequences — столкнуться с последствиями; feel guilty — чувствовать вину; in good health — в хорошем здоровье; react to — реагировать на; response to — ответ/реакция на; treat someone for — лечить кого-то от болезни.</li>
+<li><b>Idioms</b>: cry over spilt milk — переживать из-за того, что уже нельзя изменить; fly off the handle — внезапно сильно разозлиться; give someone a taste of their own medicine — отплатить человеку его же способом; give sth a miss — пропустить, не делать; grin and bear it — терпеть без жалоб; keep a straight face — сохранять серьёзное лицо; kick yourself — злиться на себя за ошибку; let off steam — выпустить пар; let sleeping dogs lie — не ворошить прошлое; up in arms about — быть крайне возмущённым.</li>
+<li><b>Word formation</b>: act → react/interaction; approve → disapprove/disapproval; content → contentment/discontent; effect → effective/ineffective; know → acknowledge/knowledgeable; patient → patience/impatient; respond → response/responsive.</li>
+</ul>
+`,
+keys:[
+"acknowledge: admit or accept that something is true",
+"disgust: strong feeling of dislike",
+"fed up: bored, annoyed or tired of something",
+"resent: feel angry because something is unfair",
+"diagnosis: identification of an illness",
+"prescribe: officially give medicine",
+"side effect: unwanted effect of medicine",
+"black out: lose consciousness",
+"pull through: survive a serious illness",
+"ward off: prevent something harmful"
+],
+vocab:[
+["acknowledge","мойындау, растау","признавать, подтверждать"],
+["agonise","қатты уайымдау","мучительно переживать"],
+["apathy","немқұрайлылық","апатия, безразличие"],
+["avoid","қашу, болдырмау","избегать"],
+["behaviour","мінез-құлық","поведение"],
+["chuckle","ақырын күлу","тихо посмеиваться"],
+["comfort","жұбату; жайлылық","утешать; комфорт"],
+["contentment","қанағаттану","удовлетворённость"],
+["dignity","абырой, қадір-қасиет","достоинство"],
+["disgust","жиіркеніш","отвращение"],
+["fed up","жалығып кеткен","сытый по горло"],
+["gloat","біреудің сәтсіздігіне қуану","злорадствовать"],
+["grimace","бет-аузын тыжырайту","гримасничать"],
+["impatient","шыдамсыз","нетерпеливый"],
+["inertia","енжарлық, қозғалыссыздық","инерция, бездействие"],
+["manners","әдеп, мінез-құлық","манеры"],
+["moan","шағымдану","жаловаться, стонать"],
+["neglect","елемеу, қараусыз қалдыру","пренебрегать"],
+["resent","ренжу, ашулану","возмущаться, обижаться"],
+["smirk","мысқылдап күлу","самодовольно ухмыляться"],
+["terror","үрей, қорқыныш","ужас"],
+["administer","дәрі/ем беру","вводить лекарство"],
+["admit","ауруханаға қабылдау","принимать в больницу"],
+["agony","қатты ауырсыну","сильная боль"],
+["antidote","уға қарсы дәрі","противоядие"],
+["consultant","дәрігер-маман","врач-консультант"],
+["diagnosis","диагноз","диагноз"],
+["inoculate","вакцина салу","делать прививку"],
+["irritation","тітіркену","раздражение"],
+["numb","жансызданған","онемевший"],
+["prescribe","дәрі жазып беру","выписывать лекарство"],
+["prognosis","медициналық болжам","прогноз"],
+["sick leave","ауруына байланысты демалыс","больничный"],
+["side effect","жанама әсер","побочный эффект"],
+["syringe","шприц","шприц"],
+["vaccine","вакцина","вакцина"],
+["ward","аурухана бөлімі","больничное отделение"]
+],
+questions:[
+{
+q:"Choose the correct option: The patient was ______ to hospital with severe chest pain.",
+a:"admitted",
+options:["admitted","prescribed","resented","acknowledged"],
+e:"Қазақша: ауруханаға қабылдау — be admitted to hospital. Русский: be admitted to hospital means be accepted as a patient."
+},
+{
+q:"Choose the correct option: The doctor ______ antibiotics for the infection.",
+a:"prescribed",
+options:["prescribed","inoculated","diagnosed","neglected"],
+e:"Қазақша: prescribe — дәрі жазып беру. Русский: prescribe means officially give medicine."
+},
+{
+q:"Choose the correct option: Some medicines have unpleasant ______ effects.",
+a:"side",
+options:["side","sick","numb","ward"],
+e:"Қазақша: side effect — жанама әсер. Русский: fixed phrase is side effect."
+},
+{
+q:"Choose the correct option: He suddenly blacked ______ during the operation.",
+a:"out",
+options:["out","up","off","down"],
+e:"Қазақша: black out — есінен тану. Русский: black out means lose consciousness."
+},
+{
+q:"Choose the correct option: She finally came ______ after the anaesthetic.",
+a:"round",
+options:["round","out","off","down"],
+e:"Қазақша: come round — есін жию. Русский: come round means become conscious again."
+},
+{
+q:"Choose the correct option: After weeks of treatment, he managed to pull ______.",
+a:"through",
+options:["through","over","out","down"],
+e:"Қазақша: pull through — ауыр жағдайдан аман шығу. Русский: pull through means survive a serious illness."
+},
+{
+q:"Choose the correct option: I’m fed ______ with people ignoring basic manners.",
+a:"up",
+options:["up","out","over","down"],
+e:"Қазақша: fed up with — әбден жалығу/шаршау. Русский: fed up with means annoyed or tired of something."
+},
+{
+q:"Choose the correct option: There’s no point crying over spilt ______.",
+a:"milk",
+options:["milk","water","medicine","tears"],
+e:"Қазақша: cry over spilt milk — өзгермейтін нәрсеге босқа өкіну. Русский: this idiom means regret something that cannot be changed."
+},
+{
+q:"Choose the correct option: The staff were up in ______ about the new hospital rules.",
+a:"arms",
+options:["arms","hands","heads","voices"],
+e:"Қазақша: up in arms about — қатты наразы болу. Русский: up in arms means very angry or protesting."
+},
+{
+q:"Choose the correct option: The vaccine is intended to ______ people from the disease.",
+a:"prevent",
+options:["prevent","resent","gloat","smirk"],
+e:"Қазақша: prevent — алдын алу, болдырмау. Русский: prevent means stop something from happening."
+}
+]
+},
+  ];
+
+function shuffle(arr){
+  const a=[...arr];
+  for(let i=a.length-1;i>0;i--){
+    const j=Math.floor(Math.random()*(i+1));
+    [a[i],a[j]]=[a[j],a[i]];
+  }
+  return a;
+}
+
+function norm(text){
+  return String(text||"")
+    .toLowerCase()
+    .replace(/\s+/g," ")
+    .replace(/[.,;:!?()«»"']/g,"")
+    .trim();
+}
+
+function render(){
+  const nav=document.getElementById("nav");
+  const app=document.getElementById("app");
+
+  nav.innerHTML=DATA.map((unit,i)=>`
+    <a href="#${unit.id}">${unit.title}</a>
+  `).join("");
+
+  app.innerHTML=DATA.map((unit,ui)=>{
+    const questionsHTML=unit.questions.map((item,qi)=>{
+      item.options=shuffle(item.options);
+      item.correctIndex=item.options.findIndex(opt=>norm(opt)===norm(item.a));
+
+      return `
+        <div class="q">
+          <div class="qtag">${unit.type} test</div>
+          <div class="qtitle">${qi+1}. ${item.q}</div>
+          ${item.options.map((opt,oi)=>`
+            <label class="opt">
+              <input type="radio" name="u${ui}-q${qi}" value="${oi}">
+              ${String.fromCharCode(65+oi)}) ${opt}
+            </label>
+          `).join("")}
+        </div>
+      `;
+    }).join("");
+
+    return `
+      <section class="card" id="${unit.id}">
+        <div class="head">
+          <h2>${unit.title}</h2>
+          <div class="desc">${unit.desc}</div>
+        </div>
+
+        <div class="langbox">
+          <div class="lang">${unit.kazakh}</div>
+          <div class="lang">${unit.russian}</div>
+        </div>
+
+        <div class="keybox">
+          <h3>Key points / Маңызды ережелер</h3>
+          <div class="grid">
+            ${unit.keys.map(k=>`<div class="pill">${k}</div>`).join("")}
+          </div>
+        </div>
+
+        ${unit.vocab ? `
+          <div class="keybox">
+            <h3>Vocabulary meanings / Сөздік / Перевод</h3>
+            <div class="grid">
+              ${unit.vocab.map(v=>`
+                <div class="pill">
+                  <b>${v[0]}</b><br>
+                  🇰🇿 ${v[1]}<br>
+                  🇷🇺 ${v[2]}
+                </div>
+              `).join("")}
+            </div>
+          </div>
+        ` : ""}
+
+        <h3 style="color:#166534;margin-top:24px;">Test — 10 questions</h3>
+
+        ${questionsHTML}
+
+        <button class="btn" onclick="checkUnit(${ui})">
+          Нәтижені көрсету / Показать результат
+        </button>
+
+        <div class="result" id="result-${ui}"></div>
+      </section>
+    `;
+  }).join("") + `
+    <div class="footer">
+      Source: Destination C1 & C2: Grammar and Vocabulary<br>
+      © @elnazm_ln
+    </div>
+  `;
+}
+
+function checkUnit(ui){
+  const unit=DATA[ui];
+  const box=document.getElementById("result-"+ui);
+
+  let score=0;
+  let html="";
+
+  unit.questions.forEach((item,qi)=>{
+    const selected=document.querySelector(`input[name="u${ui}-q${qi}"]:checked`);
+    const selectedIndex=selected ? Number(selected.value) : -1;
+    const ok=selectedIndex===item.correctIndex;
+
+    if(ok) score++;
+
+    const yourAnswer=selectedIndex>=0
+      ? `${String.fromCharCode(65+selectedIndex)}) ${item.options[selectedIndex]}`
+      : "Жауап таңдалмаған / Ответ не выбран";
+
+    const correctAnswer=`${String.fromCharCode(65+item.correctIndex)}) ${item.a}`;
+
+    html+=`
+      <div class="ans ${ok ? "ok" : "bad"}">
+        <div><b>${qi+1}. ${item.q}</b></div>
+
+        <div class="${ok ? "oktxt" : "badtxt"}">
+          ${ok ? "Дұрыс / Верно" : "Қате / Неверно"}
+        </div>
+
+        <div class="ex">
+          <b>Ваш ответ:</b><br>
+          ${yourAnswer}
+        </div>
+
+        <div class="ex">
+          <b>Правильный ответ:</b><br>
+          ${correctAnswer}
+        </div>
+
+        <div class="ex">
+          <b>Түсіндірме / Пояснение:</b><br>
+          ${item.e}
+        </div>
+      </div>
+    `;
+  });
+
+  const percent=Math.round(score/unit.questions.length*100);
+
+  box.innerHTML=`
+    <div class="summary">
+      <h3>${score} / ${unit.questions.length} дұрыс</h3>
+      <p>Результат: <b>${percent}%</b></p>
+    </div>
+    ${html}
+  `;
+
+  box.scrollIntoView({
+    behavior:"smooth",
+    block:"start"
+  });
+}
+
+render();
+
+document.addEventListener("contextmenu",e=>e.preventDefault());
+document.addEventListener("dragstart",e=>e.preventDefault());
+
+document.addEventListener("keydown",function(e){
+  const k=e.key.toUpperCase();
+
+  if(
+    e.key==="F12" ||
+    (e.ctrlKey && e.shiftKey && ["I","J","C"].includes(k)) ||
+    (e.ctrlKey && ["U","S","P","A","C"].includes(k))
+  ){
+    e.preventDefault();
+  }
+});
+</script>
+
+</body>
+</html>
