@@ -105,12 +105,15 @@ h1{
   background:rgba(255,255,255,.95);
   backdrop-filter:blur(10px);
   display:flex;
-  justify-content:center;
-  gap:10px;
-  flex-wrap:wrap;
-  padding:13px;
+  justify-content:flex-start;
+  gap:8px;
+  flex-wrap:nowrap;
+  overflow-x:auto;
+  padding:10px 12px;
   border-bottom:1px solid #bbf7d0;
   box-shadow:0 8px 20px rgba(15,23,42,.08);
+  -ms-overflow-style:none;
+  scrollbar-width:none;
 }
 .nav a{
   text-decoration:none;
@@ -118,12 +121,19 @@ h1{
   color:#166534;
   border:1px solid #86efac;
   border-radius:999px;
-  padding:9px 15px;
-  font-weight:800;
+  padding:7px 12px;
+  font-weight:700;
+  font-size:13px;
+  white-space:nowrap;
+  flex:0 0 auto;
+  line-height:1.2;
 }
 .nav a:hover{
   background:#15803d;
   color:white;
+} 
+  .nav::-webkit-scrollbar{
+  display:none;
 }
 
 .wrap{
@@ -299,6 +309,16 @@ h2{
   .subtitle{font-size:16px}
   .langbox{grid-template-columns:1fr}
   .grid{grid-template-columns:1fr}
+
+  .nav{
+    padding:8px 10px;
+    gap:6px;
+  }
+
+  .nav a{
+    font-size:12px;
+    padding:6px 10px;
+  }
 }
 </style>
 </head>
