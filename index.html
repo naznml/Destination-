@@ -321,6 +321,7 @@ h2{
   }
 }
 
+/* KZ/RU DISPLAY SWITCH — ORIGINAL CONTENT PRESERVED */
 .lang-switch{
   position:fixed;
   right:14px;
@@ -349,19 +350,10 @@ h2{
 }
 body.lang-kz .ru-only{display:none!important;}
 body.lang-ru .kz-only{display:none!important;}
-body.lang-ru .kz-text{display:none!important;}
-body.lang-kz .ru-text{display:none!important;}
-
-
-/* STRICT KZ/RU SEPARATION FIX */
-body.lang-kz .ru-only{display:none!important;}
-body.lang-ru .kz-only{display:none!important;}
 body.lang-kz .langbox .lang:nth-child(2){display:none!important;}
 body.lang-ru .langbox .lang:nth-child(1){display:none!important;}
+body.lang-kz .langbox,
 body.lang-ru .langbox{grid-template-columns:1fr!important;}
-body.lang-kz .langbox{grid-template-columns:1fr!important;}
-body.lang-kz [data-lang="ru"]{display:none!important;}
-body.lang-ru [data-lang="kz"]{display:none!important;}
 
 </style>
 </head>
@@ -389,12 +381,13 @@ body.lang-ru [data-lang="kz"]{display:none!important;}
   <h1>Destination C1 & C2<br>Grammar and Vocabulary</h1>
 
   <div class="subtitle">
-    <span class="kz-only">Қазақша түсіндіру + unit-based тесттер. Grammar және Vocabulary тақырыптары Professional English дайындығына бейімделген.</span><span class="ru-only">Русское объяснение + unit-based тесты. Темы Grammar и Vocabulary адаптированы для подготовки Professional English.</span>
+    Қазақша және орысша түсіндіру + unit-based тесттер. Grammar және Vocabulary тақырыптары Professional English дайындығына бейімделген.
   </div>
 
   <div class="notice">
     © @elnazm_ln<br>
-    <span class="kz-only">Бұл авторлық жұмыс. Көшіруге, қайта сатуға және таратуға тыйым салынады.</span><span class="ru-only">Это авторская работа. Копировать, перепродавать и распространять запрещено.</span>
+    Бұл авторлық жұмыс. Көшіруге, қайта сатуға және таратуға тыйым салынады.
+    <small>Это авторская работа. Копировать, перепродавать и распространять запрещено.</small>
   </div>
 
   <div class="source">
@@ -408,45 +401,24 @@ body.lang-ru [data-lang="kz"]{display:none!important;}
 
 <script>
 
-function clearAllResultsAfterLangSwitch(){
-  document.querySelectorAll('.result').forEach(el=>{ el.innerHTML=''; });
-  document.querySelectorAll('.opt,.option').forEach(el=>{ el.classList.remove('correct-option','wrong-option','ok','bad'); });
-}
-
-
-
-/* STRICT LANGUAGE SPLIT FOR TEST EXPLANATIONS */
+/* KZ/RU DISPLAY SWITCH — DATA NOT CHANGED */
 function currentSiteLang(){
   return document.body.classList.contains('lang-ru') ? 'ru' : 'kz';
 }
 function splitExplanationByLang(text){
   const s = String(text || '');
-  const ruIndex = s.indexOf('Русский:');
-  const kzIndex = s.indexOf('Қазақша:');
+  const kzMark = 'Қазақша:';
+  const ruMark = 'Русский:';
+  const kzIndex = s.indexOf(kzMark);
+  const ruIndex = s.indexOf(ruMark);
 
   if(kzIndex !== -1 && ruIndex !== -1){
-    const kzPart = s.slice(kzIndex + 'Қазақша:'.length, ruIndex).trim();
-    const ruPart = s.slice(ruIndex + 'Русский:'.length).trim();
+    const kzPart = s.slice(kzIndex, ruIndex).trim();
+    const ruPart = s.slice(ruIndex).trim();
     return currentSiteLang() === 'ru' ? ruPart : kzPart;
   }
-
-  if(kzIndex !== -1 && currentSiteLang() === 'kz'){
-    return s.slice(kzIndex + 'Қазақша:'.length).trim();
-  }
-
-  if(ruIndex !== -1 && currentSiteLang() === 'ru'){
-    return s.slice(ruIndex + 'Русский:'.length).trim();
-  }
-
   return s;
 }
-
-
-
-
-
-
-
 function setLang(lang){
   document.body.classList.toggle('lang-kz', lang === 'kz');
   document.body.classList.toggle('lang-ru', lang === 'ru');
@@ -455,12 +427,20 @@ function setLang(lang){
   if(kz) kz.classList.toggle('active', lang === 'kz');
   if(ru) ru.classList.toggle('active', lang === 'ru');
   localStorage.setItem('siteLang', lang);
-  clearAllResultsAfterLangSwitch();
+  document.querySelectorAll('.result').forEach(el=>{ el.innerHTML=''; });
+}
+function markLanguageBoxes(){
+  document.querySelectorAll('.langbox').forEach(box=>{
+    const cols = box.querySelectorAll('.lang');
+    if(cols[0]) cols[0].classList.add('kz-only');
+    if(cols[1]) cols[1].classList.add('ru-only');
+  });
 }
 document.addEventListener('DOMContentLoaded', function(){
-  const saved = localStorage.getItem('siteLang') || 'kz';
-  setLang(saved);
+  setLang(localStorage.getItem('siteLang') || 'kz');
+  markLanguageBoxes();
 });
+setTimeout(markLanguageBoxes, 500);
 
 
 const DATA = [
@@ -3879,3 +3859,285 @@ keys:[
 "not your cup of tea: not something you like",
 "spoilt for choice: too many good options"
 ],
+vocab:[
+["appeal","ұнау, қызықтыру","привлекать, нравиться"],
+["choice","таңдау","выбор"],
+["desire","қалау","желание"],
+["favour","артық көру","предпочитать"],
+["interest","қызығушылық","интерес"],
+["option","нұсқа","вариант"],
+["preference","артық көру","предпочтение"],
+["priority","басымдық","приоритет"],
+["reject","қабылдамау","отвергать"],
+["select","таңдау","выбирать"],
+["taste","талғам","вкус"],
+["tendency","бейімділік","склонность"],
+["voluntary","ерікті","добровольный"],
+["willingly","ықыласпен","охотно"],
+["amateur","әуесқой","любитель"],
+["athlete","спортшы","спортсмен"],
+["board game","үстел ойыны","настольная игра"],
+["championship","чемпионат","чемпионат"],
+["contestant","қатысушы","участник"],
+["defeat","жеңіліс","поражение"],
+["draw","тең нәтиже","ничья"],
+["entertainment","ойын-сауық","развлечение"],
+["fan","жанкүйер","болельщик"],
+["opponent","қарсылас","соперник"],
+["pastime","бос уақыттағы іс","занятие в свободное время"],
+["referee","төреші","судья"],
+["spectator","көрермен","зритель"],
+["tournament","турнир","турнир"],
+["chill out","демалу","расслабиться"],
+["get into","қызыға бастау","увлечься"],
+["give up","тастау, тоқтату","бросить"],
+["join in","қосылу","присоединиться"],
+["miss out on","мүмкіндікті жіберіп алу","упустить возможность"],
+["opt for","таңдау","выбрать"],
+["take up","жаңа хобби бастау","начать заниматься"],
+["try out","сынап көру","попробовать"]
+],
+questions:[
+{
+q:"Choose the correct option: I don’t really like chess; it’s not my cup of ______.",
+a:"tea",
+options:["tea","coffee","water","choice"],
+e:"Қазақша: not my cup of tea — маған ұнамайды. Русский: not my cup of tea means not something I like."
+},
+{
+q:"Choose the correct option: She decided to take ______ yoga to reduce stress.",
+a:"up",
+options:["up","off","out","over"],
+e:"Қазақша: take up — жаңа хобби бастау. Русский: take up means start a new activity."
+},
+{
+q:"Choose the correct option: He gave ______ football after a serious injury.",
+a:"up",
+options:["up","in","out","off"],
+e:"Қазақша: give up — тоқтату, тастау. Русский: give up means stop doing something."
+},
+{
+q:"Choose the correct option: We opted ______ the cheaper tickets.",
+a:"for",
+options:["for","to","with","on"],
+e:"Қазақша: opt for — таңдау. Русский: correct phrasal verb is opt for."
+},
+{
+q:"Choose the correct option: The final ended in a ______, so both teams got one point.",
+a:"draw",
+options:["draw","defeat","contestant","referee"],
+e:"Қазақша: draw — тең нәтиже. Русский: draw means a game with no winner."
+},
+{
+q:"Choose the correct option: A person who watches a match is a ______.",
+a:"spectator",
+options:["spectator","referee","opponent","contestant"],
+e:"Қазақша: spectator — көрермен. Русский: spectator is a person who watches an event."
+},
+{
+q:"Choose the correct option: The children joined ______ the game after lunch.",
+a:"in",
+options:["in","on","at","for"],
+e:"Қазақша: join in — ойынға/іс-шараға қосылу. Русский: join in means take part in an activity."
+},
+{
+q:"Choose the correct option: With so many courses available, students are spoilt for ______.",
+a:"choice",
+options:["choice","taste","priority","option"],
+e:"Қазақша: spoilt for choice — таңдау өте көп. Русский: spoilt for choice means having many good options."
+},
+{
+q:"Choose the correct option: The concert was amazing; we had the time of our ______.",
+a:"lives",
+options:["lives","hearts","choices","days"],
+e:"Қазақша: have the time of your life — өте жақсы уақыт өткізу. Русский: this idiom means enjoy yourself very much."
+},
+{
+q:"Choose the correct option: She has a strong preference ______ classical music.",
+a:"for",
+options:["for","to","with","on"],
+e:"Қазақша: preference for — бір нәрсені артық көру. Русский: correct collocation is preference for."
+}
+]
+},
+  ];
+
+function shuffle(arr){
+  const a=[...arr];
+  for(let i=a.length-1;i>0;i--){
+    const j=Math.floor(Math.random()*(i+1));
+    [a[i],a[j]]=[a[j],a[i]];
+  }
+  return a;
+}
+
+function norm(text){
+  return String(text||"")
+    .toLowerCase()
+    .replace(/\s+/g," ")
+    .replace(/[.,;:!?()«»"']/g,"")
+    .trim();
+}
+
+function render(){
+  const nav=document.getElementById("nav");
+  const app=document.getElementById("app");
+
+  nav.innerHTML=DATA.map((unit,i)=>`
+    <a href="#${unit.id}">${unit.title}</a>
+  `).join("");
+
+  app.innerHTML=DATA.map((unit,ui)=>{
+    const questionsHTML=unit.questions.map((item,qi)=>{
+      item.options=shuffle(item.options);
+      item.correctIndex=item.options.findIndex(opt=>norm(opt)===norm(item.a));
+
+      return `
+        <div class="q">
+          <div class="qtag">${unit.type} test</div>
+          <div class="qtitle">${qi+1}. ${item.q}</div>
+          ${item.options.map((opt,oi)=>`
+            <label class="opt">
+              <input type="radio" name="u${ui}-q${qi}" value="${oi}">
+              ${String.fromCharCode(65+oi)}) ${opt}
+            </label>
+          `).join("")}
+        </div>
+      `;
+    }).join("");
+
+    return `
+      <section class="card" id="${unit.id}">
+        <div class="head">
+          <h2>${unit.title}</h2>
+          <div class="desc">${unit.desc}</div>
+        </div>
+
+        <div class="langbox">
+          <div class="lang">${unit.kazakh}</div>
+          <div class="lang">${unit.russian}</div>
+        </div>
+
+        <div class="keybox">
+          <h3>Key points / Маңызды ережелер</h3>
+          <div class="grid">
+            ${unit.keys.map(k=>`<div class="pill">${k}</div>`).join("")}
+          </div>
+        </div>
+
+        ${unit.vocab ? `
+          <div class="keybox">
+            <h3>Vocabulary meanings / Сөздік / Перевод</h3>
+            <div class="grid">
+              ${unit.vocab.map(v=>`
+                <div class="pill">
+                  <b>${v[0]}</b><br>
+                  🇰🇿 ${v[1]}<br>
+                  🇷🇺 ${v[2]}
+                </div>
+              `).join("")}
+            </div>
+          </div>
+        ` : ""}
+
+        <h3 style="color:#166534;margin-top:24px;">Test — 10 questions</h3>
+
+        ${questionsHTML}
+
+        <button class="btn" onclick="checkUnit(${ui})">
+          Нәтижені көрсету / Показать результат
+        </button>
+
+        <div class="result" id="result-${ui}"></div>
+      </section>
+    `;
+  }).join("") + `
+    <div class="footer">
+      Source: Destination C1 & C2: Grammar and Vocabulary<br>
+      © @elnazm_ln
+    </div>
+  `;
+}
+
+function checkUnit(ui){
+  const unit=DATA[ui];
+  const box=document.getElementById("result-"+ui);
+
+  let score=0;
+  let html="";
+
+  unit.questions.forEach((item,qi)=>{
+    const selected=document.querySelector(`input[name="u${ui}-q${qi}"]:checked`);
+    const selectedIndex=selected ? Number(selected.value) : -1;
+    const ok=selectedIndex===item.correctIndex;
+
+    if(ok) score++;
+
+    const yourAnswer=selectedIndex>=0
+      ? `${String.fromCharCode(65+selectedIndex)}) ${item.options[selectedIndex]}`
+      : "Жауап таңдалмаған / Ответ не выбран";
+
+    const correctAnswer=`${String.fromCharCode(65+item.correctIndex)}) ${item.a}`;
+
+    html+=`
+      <div class="ans ${ok ? "ok" : "bad"}">
+        <div><b>${qi+1}. ${item.q}</b></div>
+
+        <div class="${ok ? "oktxt" : "badtxt"}">
+          ${ok ? "Дұрыс / Верно" : "Қате / Неверно"}
+        </div>
+
+        <div class="ex">
+          <b>Ваш ответ:</b><br>
+          ${yourAnswer}
+        </div>
+
+        <div class="ex">
+          <b>Правильный ответ:</b><br>
+          ${correctAnswer}
+        </div>
+
+        <div class="ex">
+          <b>Түсіндірме / Пояснение:</b><br>
+          ${item.e}
+        </div>
+      </div>
+    `;
+  });
+
+  const percent=Math.round(score/unit.questions.length*100);
+
+  box.innerHTML=`
+    <div class="summary">
+      <h3>${score} / ${unit.questions.length} дұрыс</h3>
+      <p>Результат: <b>${percent}%</b></p>
+    </div>
+    ${html}
+  `;
+
+  box.scrollIntoView({
+    behavior:"smooth",
+    block:"start"
+  });
+}
+
+render();
+
+document.addEventListener("contextmenu",e=>e.preventDefault());
+document.addEventListener("dragstart",e=>e.preventDefault());
+
+document.addEventListener("keydown",function(e){
+  const k=e.key.toUpperCase();
+
+  if(
+    e.key==="F12" ||
+    (e.ctrlKey && e.shiftKey && ["I","J","C"].includes(k)) ||
+    (e.ctrlKey && ["U","S","P","A","C"].includes(k))
+  ){
+    e.preventDefault();
+  }
+});
+</script>
+
+</body>
+</html>
